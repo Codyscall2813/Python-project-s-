@@ -1,0 +1,26 @@
+1. Modules to Install:
+   — You need to install two libraries: `requests` and `beautifulsoup4`. These can be installed using the package manager pip. You can install them with the following commands:
+     — `pip install requests`
+     — `pip install beautifulsoup4`
+
+2. Purpose of the Code:
+   — This code is designed to retrieve a web page, extract specific information from it, and display that information. 
+
+3. How It Works:
+   — Fetching the Web Page:
+     — The code starts by sending a request to a web address (URL) to get the contents of the page. This is done using the `requests` library.
+     — It checks if the request was successful (i.e., if the web page was retrieved properly). If it was successful, it returns the content of the page. If not, it prints an error message and returns nothing.
+
+   — Parsing the HTML Content:
+     — Once the page content is retrieved, the code uses `BeautifulSoup` to parse (or process) the HTML content. `BeautifulSoup` helps to navigate and search through the HTML structure.
+     — The code looks for specific parts of the page, such as sections marked with particular class names. It extracts the text from these sections, specifically titles and descriptions.
+
+   — Extracting and Displaying Information:
+     — It collects the extracted information into a list. Each entry in this list includes a title and a description.
+     — Finally, the code prints out each title and description in a readable format.
+
+   — Execution Flow:
+     — The code defines a main function that ties everything together. It fetches the web page, parses the HTML, and then prints out the information in a user-friendly way.
+     — The `main` function is executed when the script is run.
+
+This code retrieves a web page from the internet, extracts specific pieces of information from the page, and displays them. It relies on the `requests` library to get the web page and `BeautifulSoup` to parse and extract data from the HTML content.

@@ -1,0 +1,22 @@
+### Required Modules
+1. Tkinter: This is the standard Python library for creating graphical user interfaces (GUIs). It comes built-in with Python, so there's no need for separate installation. The `tk` part is the main Tkinter module, while `ttk` (Themed Tkinter) provides a set of enhanced widgets.
+2. Datetime: This is a module from Python's standard library used to work with dates and times. It helps in parsing date strings and performing date arithmetic.
+
+### What Does the Code Do?
+The code creates a simple GUI application that calculates a person's age based on their date of birth and a given future date. Here's a breakdown of the main components:
+
+1. Creating the Main Window:
+   The GUI starts by creating a main window where all the elements will be placed. This window has a title, "Age Calculator."
+
+2. Input Fields for Dates:
+   - Birthdate Entry: The user is prompted to enter their date of birth in the format `YYYY-MM-DD`. This is done using a labeled text entry box.
+   - Future Date Entry: Similarly, the user can enter a future date in the same format. The code sets this field with the current date by default, making it easier for the user to choose a nearby date or the present day.
+
+3. Calculate Button:
+   This button, when clicked, triggers the calculation of the age. The calculation function, `calculate_age`, retrieves the dates entered by the user, computes the difference in years and days, and then displays the result. It also handles any errors that might occur if the dates are entered incorrectly.
+
+4. Result Display:
+   After the calculation, the result is shown in a label below the input fields and the button. This label is updated with the calculated age or an error message if necessary.
+
+5. Running the GUI:
+   Finally, the code starts the GUI event loop, which waits for user interactions like button clicks or text input, and keeps the application running.

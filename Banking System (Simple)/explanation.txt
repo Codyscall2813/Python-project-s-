@@ -1,0 +1,31 @@
+1. Modules to Install:
+   — You don’t need to install any external modules for this code. It uses built-in modules like `random` and `os`.
+
+2. Purpose of the Code:
+   — This code simulates a simple banking system. It allows users to create bank accounts, perform transactions like deposits and withdrawals, check their account balance, and view their transaction history.
+
+3. How It Works:
+   — Bank Setup:
+     — There is a `Bank` class that manages all bank operations. This class handles creating new accounts, performing transactions, and keeping track of transaction history.
+     — Each account is represented by the `BankAccount` class, which stores account details and manages balance operations.
+
+   — Creating Accounts:
+     — Users can create new accounts by providing their name and an initial deposit. Each account gets a unique number generated randomly.
+
+   — Performing Transactions:
+     — Users can deposit money into their account or withdraw money. Deposits always succeed if the amount is positive. Withdrawals succeed if there are sufficient funds in the account; otherwise, the transaction fails.
+
+   — Checking Balance:
+     — Users can check their current account balance at any time.
+
+   — Viewing Transaction History:
+     — Users can view a history of their transactions, showing deposits and withdrawals made to their account.
+
+   — User Interaction:
+     — The `main` function is the central part of the program where users interact with the system through a menu. This menu allows users to choose options like creating an account, performing transactions, checking balance, and viewing transaction history.
+     — The program keeps running until the user chooses to exit. It displays the menu repeatedly and processes the user’s choices.
+
+   — Clearing Screen:
+     — The screen is cleared between menu displays to keep the interface clean and readable.
+
+This code sets up a basic banking system where you can manage accounts, perform transactions, and view account details and transaction history through a simple text-based menu.

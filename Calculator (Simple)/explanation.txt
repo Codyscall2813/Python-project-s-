@@ -1,0 +1,53 @@
+### What You Need
+
+- No external modules are required for this code. It uses basic Python functions and standard input/output features.
+
+### What the Code Does
+
+This code is a simple calculator that performs basic arithmetic operations: addition, subtraction, multiplication, and division. Here's how it works:
+
+1. Define Functions for Arithmetic Operations:
+   - The code defines four functions, each for a specific arithmetic operation:
+     - Add: Adds two numbers together.
+     - Subtract: Subtracts one number from another.
+     - Multiply: Multiplies two numbers.
+     - Divide: Divides one number by another. If the second number is zero, it handles the special case of division by zero by returning an error message.
+
+2. Display Operation Choices:
+   - The code presents a list of operations to the user. It shows options for addition, subtraction, multiplication, and division, each associated with a number (1, 2, 3, or 4).
+
+3. Get User Input:
+   - The user is asked to choose an operation by entering a number (1 through 4).
+   - The user is then prompted to enter two numbers, which are used in the arithmetic operations.
+
+4. Perform the Selected Operation:
+   - Based on the user's choice, the code calls the appropriate function to perform the arithmetic operation:
+     - If the user chooses 1, the program adds the two numbers.
+     - If the user chooses 2, it subtracts the second number from the first.
+     - If the user chooses 3, it multiplies the two numbers.
+     - If the user chooses 4, it divides the first number by the second. It also checks if the second number is zero to prevent division by zero.
+
+5. Display the Result:
+   - After performing the selected operation, the code prints the result, showing the operation and the outcome.
+
+6. Handle Invalid Choices:
+   - If the user inputs a choice that is not one of the valid options (1 through 4), the code prints an error message indicating that the input is invalid.
+
+### How It Works
+
+1. Function Definitions:
+   - The calculator starts by defining functions for each arithmetic operation. These functions are used to calculate the result based on the user’s input.
+
+2. User Interaction:
+   - The program interacts with the user by displaying options and asking for input. The user’s choices and numbers are collected through standard input.
+
+3. Processing the Input:
+   - The code processes the user’s input to determine which operation to perform. It then performs the selected arithmetic operation using the provided numbers.
+
+4. Output the Result:
+   - The result of the calculation is displayed to the user, showing both the operation performed and the result.
+
+5. Error Handling:
+   - The code includes basic error handling to manage division by zero and invalid choices.
+
+This code is a basic text-based calculator that allows users to perform simple arithmetic operations by selecting an option and entering two numbers.

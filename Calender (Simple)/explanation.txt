@@ -1,0 +1,29 @@
+### Module Installation
+
+1. Module: This code uses Python's built-in `calendar` module. Since it comes with Python, there's no need to install it separately.
+
+### Purpose of the Code
+
+The code displays a calendar for a specific month and year that the user inputs. 
+
+### How the Code Works
+
+1. Converting Month Name to Number:
+   — The `calendar` module has a feature to list the names of the months. The code uses this feature to convert a month name (like "July") into a month number (like 7). This conversion is necessary because the `calendar` module requires the month to be specified as a number when generating a calendar.
+
+2. User Input:
+   — The code prompts the user to enter a month and year in a specific format, such as "July, 2024".
+
+3. Processing the Input:
+   — The input string is split into two parts: the month name and the year. The month name is then converted into a month number using the previously defined conversion function.
+
+4. Displaying the Calendar:
+   — The code then uses the `calendar` module to print out the calendar for the specified month and year.
+
+### How to Use the Code
+
+— When you run the program, it will ask you to enter a month and a year.
+— You need to type the month name followed by the year, separated by a comma and a space (e.g., "July, 2024").
+— The program will then display the calendar for that month and year.
+
+This simple program demonstrates how to interact with users, process input, and use a Python module to display useful information.

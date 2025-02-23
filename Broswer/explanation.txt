@@ -1,0 +1,52 @@
+### Modules to Install
+
+— PyQt5: This library is used to create graphical user interfaces in Python. It includes tools for making windows, buttons, and other widgets. To install it, run `pip install PyQt5` in your terminal or command prompt.
+
+### What the Code Does
+
+This code creates a simple web browser application using PyQt5. Here's how it works:
+
+1. Setup PyQt5 Application:
+   — The code begins by setting up a PyQt5 application. This is the framework that allows you to create graphical user interfaces in Python.
+
+2. Create the Main Window:
+   — The main window of the application is created. This is the primary window where all the components of the browser will be displayed.
+
+3. Add a Web Browser:
+   — A web browser component is added to the main window. This component is responsible for displaying web pages. It is initialized to open the DuckDuckGo search engine by default.
+
+4. Configure the Navigation Toolbar:
+   — A toolbar is added to the main window. This toolbar contains several buttons to help with navigation:
+     — Back Button: Allows the user to go back to the previous web page.
+     — Forward Button: Allows the user to go forward to the next web page.
+     — Reload Button: Refreshes the current web page.
+   — Each button is connected to a specific action that interacts with the web browser.
+
+5. Add a URL Bar:
+   — A text input field (URL bar) is added to the toolbar. This allows the user to type in a web address.
+   — When the user presses the "Enter" key after typing a URL, the browser navigates to the entered address.
+
+6. Update the URL Bar:
+   — The URL bar is automatically updated to show the current web address of the page being displayed. This is useful for keeping track of which page is currently being viewed.
+
+7. Run the Application:
+   — The application is started, and the main window is displayed. The application will keep running, waiting for user interactions like button clicks or typing in the URL bar.
+
+### How It Works
+
+1. Initialize:
+   — The application and main window are set up.
+
+2. Display the Browser:
+   — The browser component is embedded in the main window and set to show a default web page.
+
+3. Add Navigation Controls:
+   — Buttons and a URL bar are added to the toolbar to allow navigation and interaction with the web browser.
+
+4. Handle User Input:
+   — User actions like clicking buttons or typing a URL are handled to navigate web pages or update the URL bar.
+
+5. Update and Refresh:
+   — The URL bar reflects the current page, and the browser responds to user commands.
+
+This code sets up a basic web browser application with navigation buttons and a URL bar, allowing users to browse the web and interact with web pages using a simple graphical interface.

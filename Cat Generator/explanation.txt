@@ -1,0 +1,38 @@
+### Modules to Install
+1. requests: This module is used to make HTTP requests to APIs. You can install it using: pip install requests
+
+2. Pillow: A library for opening, manipulating, and saving many different image file formats. It is used to handle image processing in Python. Install it using: pip install pillow
+
+3. ttkbootstrap: A library for styling tkinter applications, making them look more modern and user-friendly. Install it using: pip install ttkbootstrap
+
+### Purpose of the Code
+This code creates a simple graphical user interface (GUI) application that fetches and displays a random cat fact and a picture of a cat. The application uses APIs to get the cat facts and images, and displays them in the window.
+
+### How the Code Works
+
+1. API Endpoints:
+   — The code uses two APIs:
+     — CAT_IMAGE_API: Provides a random image of a cat.
+     — CAT_FACT_API: Provides a random fact about cats.
+
+2. Fetching Data:
+   — `fetch_cat_fact()`: This function sends a request to the cat fact API and retrieves a random fact. If there's an error during the request (like no internet connection), it handles the exception and returns a failure message.
+   — `fetch_cat_image()`: This function retrieves a random cat image. It processes the image to fit within a specified size using the Pillow library and prepares it for display in the GUI.
+
+3. Updating the GUI:
+   — `generate_cat()`: This function is triggered when the user clicks the "Generate" button. It calls the above functions to fetch a new cat fact and image, and updates the GUI elements (labels) with the new data.
+
+4. Creating the GUI:
+   — The GUI is created using the `tkinter` library with additional styling from `ttkbootstrap`.
+   — The main window (`root`) is set with a title and size.
+   — A `frame` is used to organize the layout.
+   — `fact_label` displays the cat fact text, and `pic_label` displays the cat image.
+   — A `generate_button` triggers the `generate_cat()` function to fetch new data.
+
+5. Running the Application:
+   — The `root.mainloop()` starts the Tkinter event loop, which waits for user interactions and updates the GUI accordingly.
+
+### How to Use the Application
+1. Starting the Application: Run the script. Ensure you have an internet connection, as the app fetches data from online APIs.
+2. Generating Cat Facts and Images: Click the "Generate" button to fetch a new random cat fact and image. The fact will be displayed as text, and the image will appear below it.
+3. Error Handling: If there is an issue fetching data (like a network error), appropriate error messages will be displayed instead of the cat fact or image.

@@ -1,0 +1,39 @@
+### Module Installation
+
+1. Tkinter: This code uses the `tkinter` module, which is the standard GUI (Graphical User Interface) library for Python. It comes pre—installed with Python, so you usually don't need to install it separately.
+2. Calendar: The `calendar` module is also built into Python and doesn't require separate installation.
+
+### Purpose of the Code
+
+This program is a simple calendar viewer with a graphical user interface (GUI). It allows the user to select a month and enter a year, then displays the corresponding calendar month.
+
+### How the Code Works
+
+1. Converting Month Name to Number:
+   — The program includes a function that converts the full name of a month (like "January") into its corresponding month number (like 1 for January, 2 for February, etc.). This conversion is essential because the calendar needs numerical input to generate the calendar view.
+
+2. Creating the GUI:
+   — The program uses `tkinter` to create a window with various elements:
+     — A dropdown menu (combobox) for selecting a month.
+     — A text entry box for inputting a year.
+     — A button labeled "Show Calendar" that, when clicked, updates the calendar display.
+     — A text area where the calendar for the selected month and year is displayed.
+
+3. Updating the Calendar Display:
+   — When the "Show Calendar" button is clicked, the program retrieves the selected month and year, converts the month name to a number, and generates the calendar for that month and year.
+   — It uses the `calendar.month()` function to create a text representation of the calendar and displays it in the text area.
+
+4. Error Handling:
+   — If the user enters an invalid year, the program catches the error and displays a message in the text area, prompting the user to enter a valid year.
+
+5. Default Behavior:
+   — The program sets the current month and year as the default selections when it starts. This feature makes the program user—friendly by providing a useful starting point without requiring any input.
+
+### How to Use the Code
+
+1. Run the Program: Launch the program, and a window will appear.
+2. Select a Month and Enter a Year: Use the dropdown menu to choose a month and the text entry box to type in a year.
+3. View the Calendar: Click the "Show Calendar" button to see the calendar for the selected month and year displayed in the text area.
+4. Handling Errors: If you enter an invalid year or if there's an issue processing the input, the program will inform you with a message.
+
+This program demonstrates basic GUI design and user interaction in Python using `tkinter`, as well as simple data processing and error handling.

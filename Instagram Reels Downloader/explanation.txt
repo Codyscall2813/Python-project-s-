@@ -1,0 +1,43 @@
+#### 1. Modules to Install
+
+To run this code, you'll need to install the following Python modules:
+
+— requests: For making HTTP requests to interact with web services.
+— beautifulsoup4: For parsing HTML content from web responses.
+
+Install them using:
+```bash
+pip install requests beautifulsoup4
+```
+
+#### 2. What Does the Code Do?
+
+This code creates a command-line application that downloads videos from Instagram posts using their URLs. It fetches video content from a specific API, processes it, and saves the video files to a local directory on your computer.
+
+#### 3. How the Code Works
+
+1. Setup and User Input:
+   — Main Function: The `main` function starts the application, welcoming the user and prompting them to enter Instagram post URLs. It continues to run until the user types 'exit'.
+   — Directory Creation: If the directory for saving videos doesn't already exist, the code creates it.
+
+2. Fetching Video Data:
+   — API Request: The application sends a POST request to an external API (a service that helps to download Instagram media) using the URL of the Instagram post provided by the user.
+   — Headers and Data: The request includes necessary headers and data to specify the type of content (video) to be fetched.
+
+3. Processing the Response:
+   — HTML Parsing: Once the API responds, the code parses the response using BeautifulSoup, which is a library that helps in extracting data from HTML documents.
+   — Finding Download Link: The code looks for the specific download link for the video within the HTML content.
+
+4. Downloading the Video:
+   — Video Download: The code sends another request to download the video file from the link found in the previous step.
+   — Saving the File: The video file is then saved locally with a unique filename in the 'downloaded_reels' directory.
+
+5. Error Handling:
+   — Exceptions: The code handles errors that may occur during HTTP requests or file operations, printing appropriate error messages if something goes wrong.
+
+This script provides a way to download videos from Instagram posts using URLs. It involves:
+
+— Asking the user for Instagram post URLs.
+— Fetching video data from an API.
+— Parsing the response to find the download link.
+— Downloading and saving the video to a specified directory on the local machine.

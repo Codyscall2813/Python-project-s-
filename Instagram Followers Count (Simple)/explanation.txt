@@ -1,0 +1,24 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the following Python module:
+— requests: This library is used for making HTTP requests to fetch data from the web. Install it using: `pip install requests`
+
+#### 2. What Does the Code Do?
+
+This code monitors and displays the follower count of a specific Instagram user in real-time. It continuously fetches the follower count from a web service and updates the display in the terminal every second.
+
+#### 3. How the Code Works
+
+1. Fetching Follower Count:
+   — API Request: The code sends a request to a web service (through a specific URL) that provides the follower count of an Instagram user. It includes various headers to mimic a request from a web browser.
+   — Response Handling: The code processes the response from the service. If the response contains the follower count, it retrieves and returns this value. If there is an error (such as an HTTP error or a problem with the request), it prints an error message.
+
+2. Displaying Follower Count:
+   — Continuous Update: The code repeatedly calls the function to fetch the follower count and updates the terminal display. It uses a loop to update the count every second.
+   — Terminal Output: It prints the follower count on the same line in the terminal. If there’s an error fetching the count, it displays an error message.
+
+3. Execution:
+   — Username: The code is set up to monitor the follower count of a specific Instagram user (e.g., `"pycode.hubb"`). You can replace this with any other username to track a different account.
+   — Real—time Updates: The script runs indefinitely, updating the follower count in the terminal every second.
+
+The script provides real—time tracking of an Instagram user’s follower count by fetching data from a web service and updating the terminal display every second. It uses the `requests` library to handle web requests and `sys.stdout.write` to update the terminal output dynamically. If there are issues with the data retrieval, it displays an error message.

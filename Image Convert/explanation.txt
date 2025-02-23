@@ -1,0 +1,63 @@
+This is for png2webp.py
+
+#### 1. Modules to Install
+
+To run this code, you need to install the following Python library:
+— Pillow: A powerful library used for image processing tasks. It provides functionalities to open, manipulate, and save various image formats.
+
+You can install Pillow using pip with the following command:
+```bash
+pip install pillow
+```
+
+#### 2. What Does the Code Do?
+
+This code is designed to convert PNG images into the WebP format. It processes all PNG files in a specified directory and saves their WebP versions in a subdirectory.
+
+#### 3. How the Code Works
+
+1. Create a Subdirectory:
+   — The code first ensures that a subdirectory named `webp` exists within the specified directory. If it doesn’t exist, it creates this subdirectory.
+
+2. List and Process Files:
+   — It then lists all files in the specified directory and checks each file to see if it has a `.png` extension. This is done to identify the PNG files that need to be converted.
+
+3. Open and Convert Images:
+   — For each PNG file, the code opens the image and converts it to the WebP format. This involves reading the PNG image and then saving it with the `.webp` extension in the `webp` subdirectory.
+
+4. Save and Confirm Conversion:
+   — After converting each image, it saves the new WebP file and prints a confirmation message to indicate the successful conversion.
+
+5. Function Execution:
+   — Finally, the function `convert_png_to_webp` is called with a specific directory name (`'bulk—png'`), which triggers the conversion process for that directory.
+
+This code converts all PNG images in a given directory to the WebP format. It creates a new subdirectory for the converted images, processes each PNG file, and saves the converted images in the WebP format while providing confirmation of each conversion.
+
+
+This is for jpg2webp.py
+
+### Explanation of the Code
+
+#### 1. Module to Install
+
+To run this code, you need to install the following Python library:
+— Pillow: This is a powerful library for image processing that allows you to open, manipulate, and save various image formats.
+
+You can install Pillow using pip with the following command: `pip install pillow`
+
+#### 2. What Does the Code Do?
+
+This code converts an image from JPG format to PNG format.
+
+#### 3. How the Code Works
+
+1. Open the Image:
+   — The code starts by opening an existing image file in JPG format. This is done by using the Pillow library, which loads the image into a format that can be manipulated programmatically.
+
+2. Save the Image in a New Format:
+   — After opening the image, the code then saves it in a new format—PNG. This involves converting the image from its original JPG format to the PNG format and storing it with a new file name.
+
+3. Print a Success Message:
+   — Once the image has been successfully converted and saved, the code prints a message to confirm that the conversion was completed.
+
+This code snippet is designed to convert an image from JPG format to PNG format. It uses the Pillow library to handle the image processing tasks, including opening the JPG image, saving it as a PNG, and providing confirmation that the process was successful.

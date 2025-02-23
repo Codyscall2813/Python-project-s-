@@ -1,0 +1,35 @@
+#### 1. Modules to Install
+
+For this code, you don't need to install any additional modules because it uses only Python's built—in features. The `random` module, which is used to generate random numbers, comes with Python and does not require separate installation.
+
+#### 2. What Does the Code Do?
+
+This code is a simple command—line game called "Guess the Number." In this game, the computer selects a random number between 1 and 100, and the player tries to guess what that number is. The game provides feedback on whether the guess is too high or too low, and it tracks the number of attempts made. After a correct guess, the game displays the number of attempts it took and asks if the player wants to play again.
+
+#### 3. How the Code Works
+
+1. Starting the Game:
+   — When the game starts, it introduces itself and informs the player that it's thinking of a number between 1 and 100.
+
+2. Generating a Random Number:
+   — The computer picks a random number within this range that the player will try to guess.
+
+3. Player's Guess:
+   — The player is prompted to enter a guess. The program then checks if the input is valid (i.e., a number between 1 and 100). If the input is not valid, it asks the player to enter a number within the correct range.
+
+4. Providing Feedback:
+   — The program compares the player’s guess to the secret number:
+     — If the guess is too low, it informs the player and prompts for another guess.
+     — If the guess is too high, it gives a similar prompt.
+     — If the guess matches the secret number, it congratulates the player and shows how many attempts were made.
+
+5. Handling Errors:
+   — If the player enters something that isn’t a number, the game catches this error and asks for a valid number.
+
+6. Playing Again:
+   — After guessing the number correctly, the game asks if the player wants to play again. If the player says "yes," the game restarts; if "no," it thanks the player and ends.
+
+7. Looping:
+   — The game is designed to loop, meaning that after the player finishes one round, they can start another without needing to restart the program manually.
+
+This code provides a fun and interactive way for users to guess a randomly chosen number. It uses basic control structures to handle user input, provide feedback, and manage the flow of the game. The program is designed to be user—friendly, including features for error handling and the option to play multiple rounds.

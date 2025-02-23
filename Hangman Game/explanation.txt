@@ -1,0 +1,46 @@
+Note: This explanation is for main.py file.
+
+#### 1. Modules to Install
+
+To run this code, you need to install the following Python library:
+— Pygame: Used for creating the game window, handling graphics, and processing user input.
+
+You can install Pygame using pip with the following command: `pip install pygame`
+
+#### 2. What Does the Code Do?
+
+This code creates a simple Hangman game using the Pygame library. In this game, the player has to guess a hidden word by selecting letters. Each incorrect guess causes a part of a stick figure to appear, and if the player makes too many incorrect guesses, they lose the game. If they guess all the letters in the word correctly before the figure is completed, they win.
+
+#### 3. How the Code Works
+
+1. Initialize Pygame:
+   — The code starts by initializing the Pygame library and setting up the game window with specified dimensions.
+
+2. Setup Game Window:
+   — The game window is created with a title and an icon image.
+
+3. Define Global Variables:
+   — Several global variables are used to manage the game state, including the current Hangman status, the word to be guessed, and the list of guessed letters.
+
+4. Reset Game Function:
+   — This function resets the game state, including selecting a new word to guess from a predefined list and setting up letter buttons on the screen.
+
+5. Draw Buttons:
+   — The game displays letter buttons on the screen that players can click to make guesses. Each button corresponds to a letter of the alphabet.
+
+6. Display the Word:
+   — The game shows the guessed letters and underscores representing the hidden letters in the word. As players guess correctly, the underscores are replaced with the guessed letters.
+
+7. Game Loop:
+   — The main game loop continuously updates the game state and handles user interactions:
+     — It checks for user input, such as mouse clicks, to process guesses.
+     — It updates the Hangman image based on the number of incorrect guesses.
+     — It checks if the game is won or lost and displays the appropriate message.
+
+8. Game Over Screen:
+   — When the game ends, either through winning or losing, a game over screen is displayed with a message indicating the outcome (win or loss). The game then exits after a brief delay.
+
+9. Cleanup:
+   — After the game loop ends, Pygame cleans up resources and closes the game window.
+
+This code sets up a Hangman game using Pygame where players guess letters to uncover a hidden word. It involves creating a game window, displaying letter buttons, handling user input, and updating the game state based on player actions. The game includes features such as tracking incorrect guesses with a visual representation (Hangman image) and displaying win/loss messages.

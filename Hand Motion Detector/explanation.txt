@@ -1,0 +1,42 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the following Python libraries:
+— OpenCV: Used for capturing video from the webcam and processing images.
+— MediaPipe: Provides hand tracking and gesture detection capabilities.
+
+You can install these libraries using pip with the following commands:
+`pip install opencv-python mediapipe`
+
+#### 2. What Does the Code Do?
+
+This code is a simple application that tracks and displays hand movements using a webcam. It detects hands in real—time and draws landmarks on the detected hands. The application will run continuously until you press a specific key ('q') to quit.
+
+#### 3. How the Code Works
+
+1. Suppressing Warnings:
+   — The code starts by suppressing warnings from libraries like TensorFlow and general warnings to keep the output clean. This step is optional and mainly used to avoid unnecessary warnings that may clutter the console.
+
+2. Initialize Libraries:
+   — MediaPipe and OpenCV are initialized. MediaPipe is used for hand tracking, while OpenCV is used for video capture and image processing.
+
+3. Capture Video:
+   — The code opens the webcam to capture live video. 
+
+4. Processing Video Frames:
+   — Each frame of the video is captured and processed. The image is first flipped horizontally to create a mirror effect, which is often more intuitive for users.
+   — The image is then converted from BGR (Blue, Green, Red) format (used by OpenCV) to RGB (Red, Green, Blue) format (used by MediaPipe).
+
+5. Hand Detection:
+   — MediaPipe processes the image to detect hands and their landmarks (key points on the hand). 
+   — The landmarks are then drawn on the image to show where the hands are detected.
+
+6. Display Video:
+   — The processed image, which now includes the hand landmarks, is displayed in a window.
+
+7. Exit Condition:
+   — The application continuously updates and displays the video until the user presses the 'q' key. Pressing 'q' breaks the loop and closes the application.
+
+8. Cleanup:
+   — Finally, the code releases the video capture object and closes any open windows to clean up resources.
+
+This code sets up a real-time hand tracking system using a webcam. It captures video frames, processes them to detect hands using MediaPipe, and draws landmarks on the detected hands. The processed video is then displayed to the user. The application runs in a loop until the user chooses to exit by pressing the 'q' key.

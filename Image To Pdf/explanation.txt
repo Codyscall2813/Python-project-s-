@@ -1,0 +1,41 @@
+#### 1. Modules to Install
+
+To run this code, you need to have the following Python libraries installed:
+— Pillow (PIL): This library is used for opening and manipulating image files. Install it using: `pip install pillow`
+  
+The code does not require any additional modules beyond what is provided with Python itself.
+
+#### 2. What Does the Code Do?
+
+This code defines a class called `ImageToPDF` that converts images in a specified directory into a PDF file. The user has the option to select individual images or combine all images in the directory into one PDF.
+
+#### 3. How the Code Works
+
+1. Initialization:
+   — Valid Formats: The code recognizes specific image formats (JPEG, PNG) for processing.
+   — Variables: It initializes variables for storing image paths, directory paths, and a flag for whether to merge all images into one PDF.
+
+2. Directory Selection:
+   — User Input: The user is prompted to choose between the current directory or specify a custom directory.
+   — Validation: The code checks if the provided directory exists.
+
+3. Image Filtering and Sorting:
+   — Filtering: The code filters out files that are not images based on the valid formats.
+   — Sorting: It sorts the files in the directory alphabetically.
+
+4. Image Selection:
+   — User Choice: Users can either select specific images or opt to merge all images into one PDF.
+   — Selection Handling: The code handles user input to either select individual images or use all images.
+
+5. Image Conversion and PDF Creation:
+   — Image Processing: The code opens each selected image, converts it to RGB mode, and adds it to a list.
+   — PDF Saving: Depending on the user's choice, the images are either saved as a single PDF or as multiple PDFs (one per image).
+
+6. Saving the PDF:
+   — Merging: If merging, all images are combined into one PDF.
+   — Single PDF: If not merging, each image is saved as a separate PDF file.
+
+7. Running the Application:
+   — User Interaction: After processing, the user can choose to run the conversion again, change the directory, or exit the application.
+
+This code provides a command-line interface for converting images from a directory into PDF files. It allows users to either merge all images into a single PDF or create separate PDFs for each image. The process involves selecting a directory, filtering and sorting images, and then converting and saving them based on user input. The use of the Pillow library is crucial for handling image files and creating PDFs.

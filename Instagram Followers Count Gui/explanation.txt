@@ -1,0 +1,39 @@
+#### 1. Modules to Install
+
+To run this code, you'll need to install several Python modules:
+
+— requests: For making HTTP requests to fetch data from the web.
+— Pillow (PIL): For image processing tasks.
+  
+Install them using: `pip install requests pillow`
+
+
+#### 2. What Does the Code Do?
+
+This code creates a graphical user interface (GUI) application that continuously updates and displays the follower count of a specific Instagram user. It also shows the user's profile picture and provides a button to visit the user's Instagram profile directly.
+
+#### 3. How the Code Works
+
+1. Fetching User Data:
+   — API Request: The code sends a request to a specific API to fetch details about an Instagram user, including their follower count and profile picture. This is done using the `requests` module.
+   — Data Processing: The response from the API is processed to extract user details, such as the follower count and profile picture URL.
+
+2. Updating the GUI:
+   — Continuous Updates: A separate thread is used to repeatedly fetch the latest follower count and update the GUI every second. This ensures the display is updated in real—time.
+   — Canvas Display: The `tkinter` library is used to create a canvas in the application window. This canvas displays:
+     — The user's profile picture (in a circular format).
+     — The number of followers (formatted with commas for readability).
+     — The username.
+   — Image Processing: The profile picture is fetched, processed into a circular shape, and displayed on the canvas. This is done using the `Pillow` library.
+
+3. User Interaction:
+   — Visit Instagram: A button on the GUI allows users to open the Instagram profile of the displayed user in a web browser. This is achieved using the `webbrowser` module.
+
+4. Application Setup:
+   — Window Configuration: The application window is set up with a specific size and title. It also uses an icon to represent the application.
+   — Canvas and Widgets: Various widgets like text labels and buttons are placed on the canvas to display user information and provide functionality.
+
+5. Running the Application:
+   — Event Loop: The `tkinter` main event loop is started to keep the application running and responsive to user interactions.
+
+The script creates a desktop application that monitors and displays an Instagram user's follower count in real—time. It uses a combination of web requests, image processing, and GUI elements to provide a dynamic and interactive experience. The application continuously updates the follower count, shows the user's profile picture, and allows users to visit the Instagram profile through a button.

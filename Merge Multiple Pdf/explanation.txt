@@ -1,0 +1,28 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the `PyPDF4` module. You can install it using pip, which is a package manager for Python. The command is: `pip install PyPDF4`
+
+
+#### 2. What Does the Code Do?
+
+This code is designed to merge multiple PDF files into a single PDF and then remove the original PDF files used in the merging process. Here’s how it works:
+
+#### 3. How the Code Works
+
+1. Merge PDFs:
+   — Finding PDF Files: The code starts by looking for all PDF files in the current directory, except for one named `Final_pdf.pdf` (this is the file that will be created).
+   — Merging Process: It then creates a new PDF file called `Final_pdf.pdf` which will contain all the merged content from the found PDF files.
+     — The `PdfFileMerger` object is used to handle the merging. It combines the content of each found PDF file into one single PDF file.
+     — If no PDF files are found, it informs the user and stops the process.
+   — Error Handling: If an error occurs during the merging process, such as a problem with reading the PDF files, the code will catch and print an error message.
+   — Cleanup: After merging, it ensures that resources are properly closed to avoid any issues.
+
+2. Remove Old PDFs:
+   — Finding Old PDFs: After merging, the code identifies all PDF files in the current directory again, except for `Final_pdf.pdf`.
+   — Removing Files: It deletes these old PDF files from the directory.
+   — Error Handling: Similar to the merging process, if an error occurs while deleting files, it will print an error message.
+
+3. Execution:
+   — When the script runs, it first calls the function to merge the PDFs and then calls the function to remove the old PDF files.
+
+This script automates the process of combining multiple PDF files into a single file and then cleaning up the old PDF files used in the merge. It ensures that the merging and removal of files are handled smoothly and provides feedback in case of errors.

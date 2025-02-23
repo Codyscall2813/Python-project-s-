@@ -1,0 +1,47 @@
+#### 1. Modules to Install
+
+No additional modules need to be installed for this code. It uses standard Python features and built—in functionality.
+
+#### 2. What Does the Code Do?
+
+This code converts a numerical value into its English words representation. For example, if you input the number 123, it will output "one hundred twenty-three."
+
+#### 3. How Does the Code Work?
+
+1. Basic Setup:
+   — The code starts by defining lists that map numbers to their word equivalents:
+     — `ones` for single digits (0-9).
+     — `teens` for numbers between 10 and 19.
+     — `tens` for multiples of ten (20, 30, etc.).
+     — `thousands` for larger numbers (thousand, million, etc.).
+
+2. Convert Numbers Less Than 1000:
+   — The `convert_chunk` function handles numbers from 0 to 999.
+     — It breaks down the number into hundreds, tens, and ones, converting each part into words.
+     — For numbers between 10 and 19, it uses the `teens` list.
+     — For numbers 20 and above, it uses both the `tens` and `ones` lists.
+
+3. Handle Large Numbers:
+   — The main function processes numbers in chunks of 1000 (thousands, millions, etc.).
+   — It repeatedly extracts the last three digits of the number, converts them to words, and appends the appropriate scale (thousand, million, etc.).
+   — It continues until the entire number has been processed.
+
+4. Negative Numbers:
+   — If the input number is negative, the function adds "minus" before converting the absolute value of the number.
+
+5. User Interaction:
+   — The code continuously prompts the user to enter a number or 'q' to quit.
+   — It reads the user's input, removes commas (if any), and attempts to convert it to an integer.
+   — It handles invalid input by displaying an error message and prompts the user again.
+
+6. Conversion Output:
+   — After converting the number to words, it prints the result.
+
+#### 4. Example Use Case
+
+— Input: 1234
+— Output: "one thousand two hundred thirty-four"
+
+The program breaks down the number into smaller chunks, converts each chunk into words, and then combines these words into a complete English representation of the number.
+
+This code is a number-to-words converter that handles numbers of various magnitudes and can output them in English. It processes the number in chunks and assembles the words according to place values, handling negative numbers and large numbers by dividing them into manageable parts. It includes a user interface that allows for continuous input and output until the user decides to quit.

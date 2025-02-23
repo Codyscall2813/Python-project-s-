@@ -1,0 +1,52 @@
+[
+  {
+    "Name": "Akshay Kumar",
+    "age": 26,
+    "birthyear": "1999"
+  },
+  {
+    "Name": "Shahruk Khan",
+    "age": 34,
+    "birthyear": "1986"
+  },
+  {
+    "Name": "Priyanka Chopra",
+    "age": 32,
+    "birthyear": "1992"
+  },
+  {
+    "Name": "Deepika Padukone",
+    "age": 28,
+    "birthyear": "1996"
+  },
+  {
+    "Name": "Ranveer Singh",
+    "age": 30,
+    "birthyear": "1993"
+  },
+  {
+    "Name": "Katrina Kaif",
+    "age": 35,
+    "birthyear": "1988"
+  },
+  {
+    "Name": "Amitabh Bachchan",
+    "age": 81,
+    "birthyear": "1942"
+  },
+  {
+    "Name": "Alia Bhatt",
+    "age": 30,
+    "birthyear": "1994"
+  },
+  {
+    "Name": "Varun Dhawan",
+    "age": 32,
+    "birthyear": "1992"
+  },
+  {
+    "Name": "Sidharth Malhotra",
+    "age": 38,
+    "birthyear": "1986"
+  }
+]

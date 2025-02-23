@@ -1,0 +1,33 @@
+#### 1. Modules to Install
+To run this code, you need to have the following Python module installed:
+
+— requests: This module is used for making HTTP requests to interact with web services.
+
+You can install it using: `pip install requests`
+
+
+#### 2. What Does the Code Do?
+
+This code checks whether your computer has an active internet connection. It does so by attempting to connect to a well—known website and determining if the connection is successful.
+
+#### 3. How the Code Works
+
+1. Defining the Function:
+   — Function Purpose: A function named `test_internet_connection` is defined to handle the task of checking the internet connection.
+
+2. Attempting to Connect:
+   — URL Used: The function tries to connect to Google's website, which is a reliable and always available site.
+   — HTTP Request: The function sends a request to this URL. If the connection is successful, the website should respond properly.
+
+3. Handling Responses:
+   — Success Check: If the website responds without any errors, it means the internet connection is active. The code prints a success message.
+   — Error Handling: If there is an issue with connecting to the website (such as no internet connection), the function catches this error and prints a message indicating that the internet connection is not working.
+
+4. Running the Function:
+   — Main Execution: The code is set to execute the function when the program is run directly. It will call the `test_internet_connection` function and print the result based on the connection status.
+
+This program helps determine if your computer is connected to the internet by:
+
+— Sending a request to Google's website.
+— Checking if the request is successful.
+— Printing a message based on whether the internet connection is active or not.

@@ -1,0 +1,13 @@
+1. Modules to Install:
+   — You need to install a module called `requests` to make HTTP requests. If you don't have it installed yet, you can get it using a package manager like pip.
+
+2. Purpose of the Code:
+   — This code creates a simple graphical application that fetches and displays random pieces of advice.
+
+3. How It Works:
+   — Fetching Advice: When you run the application, it connects to a web service that provides random advice. This is done using the `requests` module, which sends a request to the advice API and retrieves a response.
+   — Handling the Response: The response from the API is processed to extract the advice text. If there’s an error while fetching the advice, an error message is shown.
+   — Creating the User Interface: The user interface (UI) is built using `tkinter`, which is a module for creating graphical interfaces in Python. The application window has a label to show the advice and a button that, when clicked, triggers the fetching of new advice.
+   — Running the Application: The application starts by displaying the initial advice and then enters a loop to wait for user interactions, like clicking the button.
+
+So, this application fetches advice from the web and displays it in a graphical window. The `requests` module is used for making web requests, and `tkinter` is used to create the graphical user interface.

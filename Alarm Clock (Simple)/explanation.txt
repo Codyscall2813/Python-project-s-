@@ -1,0 +1,21 @@
+1. Modules to Install:
+   — `playsound`: This is an external module used to play sound files. You'll need to install it using a package manager like pip. You can install it with the command `pip install playsound`.
+
+2. Purpose of the Code:
+   — The code creates a simple alarm clock. It lets you set an alarm time and will play a sound when the current time matches the alarm time.
+
+3. How It Works:
+   — Setting the Alarm:
+     — When you run the program, it asks you to input the time for the alarm. You need to enter this time in a 12—hour format (like 7:30 PM).
+     — The program then tries to convert this input into a time format that it can work with. If the input is in the correct format, it saves the alarm time; if not, it asks you to try again until the format is correct.
+
+   — Running the Alarm Clock:
+     — Once the alarm time is set, the program prints out the time when the alarm is set to go off.
+     — The program then enters a loop where it continuously checks the current time.
+     — It compares the current time with the set alarm time. If the current time matches the alarm time, it prints a message indicating that the alarm is ringing and plays a sound (specified in the `alarm_sound.mp3` file).
+     — The program then stops after playing the sound.
+
+   — Waiting and Checking Time:
+     — While waiting for the alarm time to match, the program pauses briefly (10 seconds) before checking the time again. This prevents the program from continuously running without breaks.
+
+This code sets an alarm based on user input, waits for the specified time, and then plays a sound to alert the user when the alarm goes off. It uses the `datetime` module to handle time and the `playsound` module to play the alarm sound.

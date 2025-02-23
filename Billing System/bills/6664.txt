@@ -1,0 +1,34 @@
+	Welcome to Baban Kirana Store
+Bill Number: 6664
+Customer Name: Rakesh Mishra
+Phone Number: 8146262210
+=====================================
+Products		QTY		Price
+=====================================
+--------- Medical ---------
+Sanitizer		5		125
+Mask		2		20
+Hand Gloves		2		20
+Dettol		3		45
+Newsprin		7		245
+Thermal Gun		1		5
+--------- Grocery ---------
+Rice		5		125
+Food Oil		2		20
+Wheat		2		20
+Daal		3		45
+Flour		4		80
+Maggi		8		320
+--------- Cold Drinks ---------
+Sprite		1		5
+Limka		1		5
+Mazza		1		5
+Coke		1		5
+Fanta		1		5
+-------------------------------------
+Total Medical Tax:		Rs. Rs. 9.20
+Total Grocery Tax:		Rs. Rs. 13.70
+Total Cold Drinks Tax:		Rs. Rs. 5.40
+Total Bill Amount:		Rs. 540.3000000000001
+-------------------------------------
+

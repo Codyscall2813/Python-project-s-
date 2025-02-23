@@ -1,0 +1,41 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the following module:
+
+- OpenCV (`cv2`): This module handles webcam interaction and image processing.
+
+You can install OpenCV using pip:
+- `pip install opencv-python`
+
+#### 2. What Does the Code Do?
+
+This code allows you to take selfies using your webcam. It displays a live feed from the webcam and lets you capture images by pressing the space bar. You can also terminate the program by pressing the Escape key.
+
+#### 3. How Does the Code Work?
+
+1. Preparation:
+   - The code first displays instructions telling you to press the space bar to take a selfie and the Escape key to terminate the program.
+   - It then waits for 5 seconds before starting the webcam, giving you time to get ready.
+
+2. Initialize the Webcam:
+   - The code sets up the webcam using OpenCV's `VideoCapture` method. This method starts capturing video from the webcam.
+
+3. Create a Display Window:
+   - It creates a window named "Take Selfie with Python" to show the live feed from the webcam.
+
+4. Capture and Display Video Feed:
+   - The program enters a loop where it continuously captures frames (images) from the webcam and displays them in the window.
+
+5. Handle Key Presses:
+   - The program waits for key presses:
+     - Escape Key (27): Closes the window and stops the program.
+     - Space Bar (32): Takes a snapshot of the current frame.
+
+6. Take a Selfie:
+   - When the space bar is pressed, the code creates a unique filename using the current date and time. This ensures that each selfie is saved with a different name, avoiding file overwrites.
+   - The captured frame is then saved as a JPEG image file with the generated filename.
+
+7. Finish Up:
+   - When the Escape key is pressed or the program ends, the webcam is released, and all OpenCV windows are closed.
+
+This code sets up a webcam to take selfies on demand. It continuously displays the webcam feed and listens for key presses. Pressing the space bar captures and saves an image, while pressing the Escape key stops the program and closes the webcam feed. This allows for easy and immediate selfie-taking with timestamps for file naming.

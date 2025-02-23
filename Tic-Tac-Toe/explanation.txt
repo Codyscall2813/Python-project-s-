@@ -1,0 +1,34 @@
+#### 1. Modules to Install
+
+This code does not require any additional modules; it uses only Python’s built-in functionality.
+
+#### 2. What Does the Code Do?
+
+This code implements a simple console-based Tic-Tac-Toe game. Here’s a breakdown of how it works:
+
+1. Game Setup:
+   - The game starts by creating an empty 3x3 board, where each cell is initialized with a space character representing an empty spot.
+
+2. Displaying the Board:
+   - The `print_board` function displays the current state of the board to the console. Each row of the board is printed with cells separated by vertical bars, and rows are separated by horizontal lines.
+
+3. Player Moves:
+   - Players take turns entering their moves. They provide the row and column where they want to place their marker ("X" or "O").
+   - The `main` function handles the input from players, updates the board with the player's marker, and checks the validity of the move.
+
+4. Checking for a Winner:
+   - After each move, the `check_winner` function is called to determine if the current player has won the game. It checks:
+     - Each row to see if all cells are occupied by the same player.
+     - Each column for the same condition.
+     - The two diagonals to see if all cells are occupied by the same player.
+
+5. Checking for a Draw:
+   - If the board is full and no player has won, the `is_full` function determines if the game is a draw. This function checks if there are no empty cells left on the board.
+
+6. Switching Players:
+   - The game alternates between players "X" and "O". After each valid move, the player is switched until the game ends.
+
+7. Ending the Game:
+   - The game ends when a player wins or when the board is full and no more moves can be made. The result is displayed, and the game exits.
+
+This code creates a basic Tic-Tac-Toe game that can be played in the console. It involves setting up a game board, taking player inputs for their moves, checking for a winner or a draw, and alternating between players. The game continues until one player wins or the board is full.

@@ -1,0 +1,52 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the following module:
+
+- Pygame: This library is used for creating video games and handling graphics, sound, and user input.
+
+You can install Pygame using pip:
+- `pip install pygame`
+
+#### 2. What Does the Code Do?
+
+This code creates a basic Snake game using the Pygame library. In this game, you control a snake that moves around the screen, eats food to grow longer, and must avoid running into itself or the edges of the screen. The game continues until the snake collides with itself or the screen boundary.
+
+#### 3. How Does the Code Work?
+
+1. Setup:
+   - The code initializes Pygame and sets up the game window with specified dimensions (600x400 pixels).
+   - It defines some constants like the size of each block of the snake and the speed of the game.
+
+2. Game Window and Display:
+   - It creates a game window with a title "Snake Game" and sets up a clock to control the game's frame rate.
+
+3. Game Class:
+   - A class called `SnakeGame` is defined to manage the game logic. It includes initializing the game state, handling the game loop, and responding to user inputs.
+
+4. Game Initialization:
+   - The `__init__` method sets up the initial game state, including the snake's starting position, the position of the food, and game settings.
+
+5. Drawing and Displaying Elements:
+   - The `draw_snake` method renders the snake on the screen.
+   - The `display_score` method shows the current score on the screen and updates it as the game progresses.
+   - The `game_message` method displays messages like "You Lost!" when the game ends.
+
+6. Game Instructions:
+   - The game starts by showing instructions on how to start the game. It waits for the player to press an arrow key to begin.
+
+7. Game Loop:
+   - The main game loop starts after the instructions screen. It continuously updates the game state based on user inputs and game conditions.
+   - The player controls the snake using arrow keys. The snake moves in the direction of the last key pressed.
+   - The game checks for collisions with the screen edges and with the snake itself. If a collision is detected, the game ends.
+   - When the snake eats food, the snake grows, and new food is placed randomly on the screen.
+
+8. Handling User Input:
+   - The game listens for key presses to control the snake and respond to game events, such as ending the game or restarting it.
+
+9. Game Over and Restart:
+   - If the snake hits the edge of the screen or itself, the game displays a "You Lost!" message. The player can then press 'q' to quit or 'c' to restart the game.
+
+10. Cleanup:
+    - Once the game ends, the code cleans up by quitting Pygame and closing the game window.
+
+This code creates a simple Snake game where you control a snake to eat food and grow longer while avoiding collisions. It uses Pygame to handle graphics and user input, providing a basic yet functional game experience. The game includes features for displaying instructions, handling game logic, responding to user inputs, and showing the final score.

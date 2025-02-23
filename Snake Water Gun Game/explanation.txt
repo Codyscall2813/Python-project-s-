@@ -1,0 +1,43 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the following module:
+
+- No external modules are required beyond Python's standard library.
+
+#### 2. What Does the Code Do?
+
+This code implements a simple game called "Snake-Water-Gun." The game is a variant of Rock-Paper-Scissors with three choices: Snake (s), Water (w), and Gun (g). The player competes against the computer in a series of rounds. The player who wins the most rounds out of ten is declared the winner.
+
+#### 3. How Does the Code Work?
+
+1. Initialization:
+   - The code defines some color formatting codes for printing colored text in the terminal using ANSI escape codes.
+   - It also sets up a list of choices for the game: Snake, Water, and Gun.
+
+2. Functions:
+   - `clear_screen`: Clears the terminal screen (specific to Windows with `cls` command).
+   - `print_colored`: Prints a message in a specified color.
+   - `get_user_input`: Prompts the user for input and returns the input in lowercase.
+   - `play_game`: Handles the game logic, where the player plays against the computer in ten rounds. It compares the player's choice to the computer's choice, determines the outcome, and updates the score.
+
+3. Game Logic:
+   - The game runs for 10 rounds.
+   - In each round, the computer randomly selects one of the choices.
+   - The user is asked to input their choice.
+   - The game checks if the user’s choice is valid. If it's invalid, the user is prompted to try again.
+   - The game compares the player's choice with the computer's choice to determine if the player wins, loses, or if it's a draw.
+   - The score is updated based on the outcomes, and the number of remaining matches is displayed.
+
+4. End of Game:
+   - After 10 rounds, the game displays the final score.
+   - It provides a message based on the player’s score:
+     - If the score is greater than 5, the player wins.
+     - If the score is exactly 5, it's a draw.
+     - If the score is less than 5, the player loses.
+
+5. Main Program:
+   - The game starts by clearing the screen and printing a welcome message.
+   - It then prompts the user to decide whether they want to play or not.
+   - If the user agrees to play, the game starts, and if they decline, the program exits with a goodbye message.
+
+This code provides a basic implementation of the "Snake-Water-Gun" game where the player competes against the computer. The game runs for ten rounds, and the player’s goal is to win as many rounds as possible. The code handles user input, compares choices, updates scores, and prints colored messages to make the game interactive and visually engaging.

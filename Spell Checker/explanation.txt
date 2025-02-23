@@ -1,0 +1,32 @@
+#### 1. Module to Install
+
+To run this code, you need to install the following module:
+
+- TextBlob: This module provides tools for processing textual data, including spell checking and correction. You can install it using a package manager like pip.
+
+#### 2. What Does the Code Do?
+
+This code reads a text file, checks it for spelling errors, corrects those errors, and then saves the corrected text to a new file. It also provides a report on the corrections made.
+
+#### 3. How Does the Code Work?
+
+1. Reading the File:
+   - The code starts by opening and reading the content of a text file specified by the user. This file is expected to contain the text that needs spell checking.
+
+2. Spell Checking and Correction:
+   - The content of the file is then processed using the TextBlob library. TextBlob analyzes the text and identifies any spelling mistakes.
+   - It attempts to correct these spelling mistakes and generates a corrected version of the text.
+
+3. Displaying Corrections:
+   - The code compares the original text with the corrected text to identify and count the corrections made.
+   - It displays each word that was corrected, showing the original word and the corrected version.
+
+4. Saving the Corrected Text:
+   - If any corrections were made, the code saves the corrected text to a new file. The new file is named by appending `_corrected` to the original file’s name, ensuring that the corrected text does not overwrite the original.
+   - If no corrections were necessary, it simply informs the user that no changes were needed.
+
+5. User Interaction:
+   - The main function prompts the user to enter the path of the text file they want to check.
+   - It then calls the function to perform the spelling check and correction based on the provided file path.
+
+This code allows users to perform spelling correction on a text file using the TextBlob library. It reads the text from the file, uses TextBlob to identify and correct spelling errors, and then saves the corrected text to a new file. The code also provides feedback on the corrections made, helping users see which words were changed.

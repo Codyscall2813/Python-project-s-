@@ -1,0 +1,33 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the `gTTS` (Google Text-to-Speech) library. You can install it using the following command: `pip install gTTS`
+
+
+This code also uses standard libraries (`os` and `platform`) which are included with Python and don’t need to be installed separately.
+
+#### 2. What Does the Code Do?
+
+This code converts a block of text into spoken audio and plays it back. Here’s a step-by-step explanation of how it works:
+
+1. Text Input:
+   - The code starts by defining the text that you want to convert into speech. This text is a message that will be spoken aloud.
+
+2. Setting Language:
+   - It sets the language for the speech synthesis. In this case, it's set to English (`"en"`).
+
+3. Creating the Speech:
+   - The `gTTS` library is used to convert the text into an audio file. `gTTS` takes the input text and the language setting and generates speech. The `slow=False` parameter indicates that the speech should be at a normal speed (not too slow).
+
+4. Saving the Audio File:
+   - The generated speech is saved as an audio file in MP3 format. This file will be named "demo.mp3".
+
+5. Playing the Audio:
+   - After saving the audio file, the code defines a function to play the audio file. It uses different commands depending on the operating system:
+     - On Windows, it uses the command to start the file using the default media player.
+     - On macOS, it uses the command to play the file with the built-in audio player.
+     - On Linux, it uses a command that plays MP3 files.
+
+6. Executing the Playback:
+   - Finally, the function to play the audio is called, which will play the "demo.mp3" file and you will hear the spoken text.
+
+This code uses the `gTTS` library to convert a specified text into speech and save it as an MP3 file. It then plays the saved audio file using appropriate commands based on the operating system you're using. This script is a simple example of text-to-speech functionality and how to handle audio playback across different platforms.

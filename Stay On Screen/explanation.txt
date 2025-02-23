@@ -1,0 +1,32 @@
+#### 1. Module to Install
+
+To use this code, you need to install the following module:
+
+- PyAutoGUI: This module allows you to programmatically control the mouse and keyboard. You can install it using a package manager like pip.
+
+#### 2. What Does the Code Do?
+
+This code is designed to keep your computer from going into sleep mode or activating any screen saver by moving the mouse cursor periodically.
+
+#### 3. How Does the Code Work?
+
+1. Purpose:
+   - The main goal of the code is to simulate mouse activity to prevent your computer from entering sleep mode or activating a screensaver. This can be useful if you want to keep applications active without manual intervention.
+
+2. Movement of the Mouse:
+   - The code continuously moves the mouse cursor back and forth every 10 seconds. It does this by moving the mouse a small distance to the right and then back to the left.
+   - This movement is achieved using PyAutoGUI, which can move the mouse cursor to specified coordinates or relative to its current position.
+
+3. Timing:
+   - The code includes a delay of 10 seconds between each mouse movement to prevent continuous motion, which would be too disruptive.
+   - This is controlled by a sleep function that pauses the execution of the code for 10 seconds between movements.
+
+4. Stopping the Process:
+   - The code runs in an infinite loop, continuously moving the mouse as long as the program is running.
+   - If you want to stop the process, you can use a keyboard shortcut (CTRL-C). This will interrupt the loop and terminate the program.
+
+5. User Interaction:
+   - When you start the program, it will display a message informing you that you can stop it with CTRL-C.
+   - Once started, it will keep running until you manually stop it.
+
+This code keeps your computer active by periodically moving the mouse cursor back and forth. It uses PyAutoGUI to control the mouse and includes a sleep interval to regulate the frequency of movement. The process runs indefinitely until manually interrupted with CTRL-C. This can be useful for preventing your computer from entering sleep mode or triggering a screensaver during long periods of inactivity.

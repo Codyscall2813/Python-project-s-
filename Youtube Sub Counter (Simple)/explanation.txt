@@ -1,0 +1,26 @@
+#### 1. Modules to Install
+
+You need to install the `requests` module if it's not already installed. You can do this using: `pip install requests`
+
+#### 2. What Does the Code Do?
+
+This script monitors the subscriber count of a specific YouTube channel in real-time. It fetches data from a public API and displays updates on the subscriber count when it changes.
+
+#### 3. Detailed Breakdown
+
+1. API Setup:
+   - URL: The script uses a specific URL to fetch subscriber count data for a YouTube channel.
+   - Headers: Custom headers are included in the request to mimic a real browser request and potentially bypass some web security checks.
+
+2. Fetching Subscriber Count:
+   - Send Request: A GET request is sent to the API endpoint with the specified headers.
+   - Parse Response: The response is parsed as JSON to extract the subscriber count.
+   - Error Handling: If there’s an issue with the request (e.g., network problems or invalid response), an error message is printed.
+
+3. Monitoring:
+   - Initial Fetch: The script fetches the subscriber count once at the start to get the initial value.
+   - Continuous Monitoring: It enters a loop where it continuously fetches the current subscriber count every 2 seconds.
+   - Update Display: If the subscriber count changes from the last fetched value, it updates the display in the terminal. It uses a carriage return to overwrite the previous output, so the display is updated on the same line.
+
+4. Exit Handling:
+   - Keyboard Interrupt: The script can be stopped by the user pressing `Ctrl+C`, which triggers a graceful exit with a termination message.

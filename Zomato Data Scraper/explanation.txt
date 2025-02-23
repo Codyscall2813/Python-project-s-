@@ -1,0 +1,36 @@
+#### 1. Modules to Install
+
+To run this code, you need to install several Python modules. You can install them using `pip` with the following commands:
+
+```
+pip install beautifulsoup4
+pip install selenium
+pip install webdriver-manager
+```
+
+#### 2. What Does the Code Do?
+
+This script is designed to scrape the menu details from a Zomato restaurant webpage. It extracts information such as category names, item names, and their prices from the menu.
+
+#### 3. Detailed Breakdown
+
+1. Setup for Web Scraping:
+   - Selenium: This is a tool used for automating web browsers. It allows the script to control a browser, such as Chrome, to navigate to web pages and interact with them.
+   - BeautifulSoup: Although imported, it's not used in this script. It is typically used for parsing HTML and XML documents.
+   - ChromeDriver: The script uses ChromeDriver, a component that enables Selenium to interact with Chrome.
+
+2. Chrome Browser Configuration:
+   - Headless Mode: The script runs Chrome in headless mode, meaning it operates without opening a visible browser window. This is useful for running scripts on servers or when a graphical interface is not needed.
+   - Additional Options: It disables some Chrome features that are not needed for scraping.
+
+3. Function to Get Zomato Menu:
+   - Initialization: The script initializes a Chrome WebDriver instance to interact with the Zomato webpage.
+   - Data Extraction:
+     - Categories: It loops through potential category sections on the page, extracting the category names.
+     - Items and Prices: For each category, it attempts to extract the names and prices of menu items. It handles variations in the HTML structure for prices by trying different approaches to locate the price.
+   - Data Structure: The extracted data is organized into a nested dictionary. The top-level keys are category names, and the values are dictionaries of item names and their prices.
+
+4. Main Execution:
+   - User Input: It prompts the user to enter the URL of a Zomato restaurant page.
+   - Fetch Data: It calls the function to get the menu data from the provided URL.
+   - Display Results: It prints the extracted menu categories, item names, and prices in a formatted manner.

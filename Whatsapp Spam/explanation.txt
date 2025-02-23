@@ -1,0 +1,29 @@
+#### 1. Modules to Install
+
+This code uses the following Python modules:
+
+- `pyautogui`: This module allows you to programmatically control the mouse and keyboard. You can install it using the command `pip install pyautogui`.
+- `webbrowser`: This module is part of Python's standard library and does not require separate installation. It is used to open a web browser.
+- `time`: This module is also part of Python's standard library and does not require separate installation. It is used for adding delays in the program.
+
+#### 2. What Does the Code Do?
+
+This code is designed to automate the process of sending messages on WhatsApp Web. Here’s a breakdown of its functionality:
+
+1. Opening WhatsApp Web:
+   - Web Browser: The code uses the `webbrowser` module to open WhatsApp Web in the default web browser. It opens the WhatsApp Web URL, which allows you to interact with WhatsApp from your computer.
+
+2. Waiting for Page to Load:
+   - Delay: It waits for 20 seconds to ensure that WhatsApp Web has fully loaded and you are logged in. This delay is crucial for allowing the web page to load completely before attempting to send messages.
+
+3. Message Sending Setup:
+   - Message Content: You can specify the message you want to send repeatedly.
+   - Number of Messages: The code is set to send a specified number of messages (e.g., 500).
+   - Delay Between Messages: There is a delay (e.g., 1 second) between sending each message to avoid overwhelming the system or triggering spam detection.
+
+4. Sending Messages:
+   - Typing and Sending: Using the `pyautogui` module, the code types the message and simulates pressing the "Enter" key to send it. It repeats this process for the number of messages specified.
+   - Pause: After sending each message, it waits for the specified delay before sending the next message.
+
+5. Completion Message:
+   - Notification: Once all the messages have been sent, it prints a confirmation message indicating that the messages have been sent successfully.

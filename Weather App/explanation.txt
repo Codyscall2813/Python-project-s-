@@ -1,0 +1,33 @@
+#### 1. Modules to Install
+
+To run this code, you'll need to install the following libraries:
+
+- `tkinter`: This is included with Python and doesn't require separate installation. It's used for creating graphical user interfaces (GUIs).
+- `PIL` (Pillow): This library is used for image processing. Install it with: `pip install Pillow`
+- `ttkbootstrap`: A library that provides a modern look for Tkinter widgets. Install it with: `pip install ttkbootstrap`
+- `requests`: This library is used to make HTTP requests. Install it with: `pip install requests`
+
+#### 2. What Does the Code Do?
+
+This code creates a simple GUI application to get and display weather information for a city using data from the OpenWeatherMap API. Here's how it works:
+
+1. Setup and Imports:
+   - The code starts by importing the necessary libraries. `tkinter` is used for creating the GUI, `PIL` for handling images, and `requests` for making HTTP requests to the weather API. `ttkbootstrap` is used to enhance the look of the Tkinter widgets.
+
+2. Fetch Weather Information:
+   - The `get_weather` function is responsible for fetching weather data from the OpenWeatherMap API. It builds a request URL with the city name and API key, sends a request, and processes the response to extract weather details like temperature, description, and an icon.
+
+3. Search Function:
+   - The `search` function is triggered when the user clicks the search button. It reads the city name entered by the user, calls `get_weather` to get the weather details, and updates the GUI with this information. It also handles errors if the city is not found or if there are issues fetching the data.
+
+4. GUI Components:
+   - Main Window: The application window is created using `ttk.Window` with a specified theme and size.
+   - City Entry: A text entry field where the user types the city name.
+   - Search Button: When clicked, it triggers the `search` function to fetch and display the weather information.
+   - Labels: Several labels are used to display the city name, weather icon, temperature, and description.
+
+5. Image Handling:
+   - The weather icon is downloaded from the web and displayed in the GUI. If there is an issue with loading the image, an error message is shown.
+
+6. Event Loop:
+   - The `root.mainloop()` function starts the Tkinter event loop, which keeps the application running and responsive to user actions.

@@ -1,0 +1,33 @@
+#### 1. Modules to Install
+
+This code uses the following Python modules:
+
+- `os`: This module is included with Python and does not require separate installation. It provides a way to interact with the operating system, like clearing the screen.
+- `time`: This module is also included with Python and does not require separate installation. It is used to introduce delays in the program.
+
+#### 2. What Does the Code Do?
+
+This code provides a command-line tool to manage website blocking on a Windows system. It can block and unblock websites by modifying the system's hosts file. Here's a step-by-step overview of what the code does:
+
+1. Header and Functions:
+   - Header: A visual header is displayed when the program starts, which is purely decorative.
+   - Functions: The code includes several functions to handle different tasks:
+     - `normalize_website`: Cleans up the website URL by removing "www." if present.
+     - `block_website`: Adds entries to the hosts file to block a specific website. It redirects requests to the local machine (127.0.0.1), effectively blocking access.
+     - `block_sites_from_file`: Reads a list of websites from a file and blocks each one using the `block_website` function.
+     - `print_blocked_websites`: Displays a list of currently blocked websites by reading the hosts file.
+     - `unblock_website`: Removes entries from the hosts file to unblock a specific website.
+     - `clear_screen`: Clears the console screen to make the interface cleaner.
+
+2. Main Functionality:
+   - User Interface: A text-based menu allows users to choose from several options:
+     - Block a single website.
+     - Block multiple websites from a text file.
+     - Print the list of currently blocked websites.
+     - Unblock a specific website.
+     - Exit the program.
+   - Menu Handling: Depending on the user's choice, the program prompts for additional information (like a website URL or file path) and calls the appropriate function to perform the action.
+
+3. Program Execution:
+   - Loop: The `main` function runs an infinite loop that displays the menu, processes user input, and performs the selected actions until the user chooses to exit.
+   - Error Handling: The program includes basic error handling to manage issues like file not found or errors during file operations.

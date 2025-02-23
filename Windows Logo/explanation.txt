@@ -1,0 +1,41 @@
+#### 1. Module to Install
+
+The code uses the `turtle` module, which is part of Python's standard library. You do not need to install it separately.
+
+#### 2. What Does the Code Do?
+
+This script uses the Turtle Graphics library to draw shapes on a window. Here’s a step-by-step breakdown of how it works:
+
+1. Initialize Turtle and Screen:
+   - Turtle Object: A turtle object is created, which is used to draw shapes and lines.
+   - Screen Object: A window (screen) is created where the drawing will appear. The background color of this window is set to black.
+
+2. Draw a Filled Quadrilateral:
+   - Setup: The turtle is moved to a starting position without drawing.
+   - Drawing: The turtle draws a quadrilateral (a four-sided shape) by moving to four specified points on the screen.
+   - Color: The shape is filled with a specific color while drawing.
+   - Completion: The filling of the shape is completed.
+
+3. Draw Vertical and Horizontal Lines:
+   - Vertical Line: The turtle is repositioned to draw a thick vertical line.
+   - Horizontal Line: The turtle is then repositioned to draw a horizontal line across the screen.
+
+4. Keep the Window Open:
+   - The window stays open and visible until the user decides to close it. This allows you to view the drawing.
+
+#### Detailed Breakdown
+
+1. Initialize:
+   - Turtle: A turtle is an object that moves around the screen to draw. In this script, it’s used to create shapes and lines.
+   - Screen: The window where the turtle draws. You can customize the screen’s appearance, like setting the background color.
+
+2. Drawing the Quadrilateral:
+   - Movement: The turtle moves to specific coordinates to create a shape.
+   - Filling: The shape is filled with color as the turtle moves around the perimeter.
+
+3. Drawing Lines:
+   - Vertical Line: The turtle draws a line from the top to the bottom of the screen.
+   - Horizontal Line: The turtle draws a line from one side of the screen to the other.
+
+4. Display:
+   - Keep Open: The `mainloop` function ensures the window remains open until manually closed.

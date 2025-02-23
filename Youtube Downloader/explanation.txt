@@ -1,0 +1,34 @@
+#### 1. Modules to Install
+
+You need to install the `yt-dlp` module if it’s not already installed in your Python environment. You can install it using: `pip install yt-dlp`
+
+`yt-dlp` is a command-line program that allows you to download videos from YouTube and other video platforms.
+
+#### 2. What Does the Code Do?
+
+This script is designed to download a YouTube video from a given URL. Here’s a step-by-step explanation of how it works:
+
+1. Define Download Options:
+   - Format Selection: The script specifies that it wants to download the best quality video available with a height of up to 1080 pixels.
+   - Playlist Handling: It ensures that only a single video is downloaded, even if the provided URL is part of a playlist.
+
+2. Download the Video:
+   - Create YoutubeDL Object: The `yt_dlp.YoutubeDL` object is initialized with the download options specified.
+   - Download: The `download` method of the `YoutubeDL` object is called with the provided URL. This method handles the downloading process.
+
+3. User Input:
+   - Prompt for URL: When the script is run, it asks the user to input the URL of the YouTube video they want to download.
+   - Execute Download: It then calls the `download_youtube_video` function with the provided URL to start the download process.
+
+#### Detailed Breakdown
+
+1. Download Options:
+   - Format: The `format` option specifies that the script should download the best available video quality with a height of 1080 pixels or less. This ensures the video is of high quality but not excessively large.
+   - Noplaylist: By setting `noplaylist` to `True`, the script ensures that only the specified video is downloaded, not an entire playlist if the URL points to one.
+
+2. Download Process:
+   - yt_dlp.YoutubeDL: This object is responsible for handling the download. It uses the provided options to determine the quality and format of the video.
+   - Downloading: The `download` method fetches the video from the provided URL and saves it to the local file system.
+
+3. Execution Flow:
+   - Main Function: When the script is executed, it prompts the user for a YouTube video URL and then invokes the `download_youtube_video` function to process the download.

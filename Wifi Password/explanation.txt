@@ -1,0 +1,32 @@
+#### 1. Modules to Install
+
+The code uses the `subprocess` module, which is part of Python's standard library. You do not need to install it separately.
+
+#### 2. What Does the Code Do?
+
+This script retrieves the name and password of the currently connected Wi-Fi network on a Windows machine. Here’s a step-by-step explanation of its functionality:
+
+1. Retrieve Connected Wi-Fi Name:
+   - Command Execution: The code uses the `subprocess` module to run a system command that fetches information about the Wi-Fi interfaces on the computer.
+   - Data Parsing: It parses the output to find the name (SSID) of the currently connected Wi-Fi network.
+
+2. Retrieve Wi-Fi Password:
+   - Command Execution: It runs another system command to get details about the Wi-Fi profile of the connected network, including the password.
+   - Data Parsing: It searches through the command output to find and extract the password.
+
+3. Output the Results:
+   - Display: The script prints the name of the connected Wi-Fi network and its password if available. If no password is found or if there’s an issue retrieving the data, it provides appropriate messages.
+
+#### Detailed Breakdown
+
+1. Function: `get_connected_wifi_name`:
+   - Purpose: Retrieves the SSID (name) of the currently connected Wi-Fi network.
+   - How: It executes the `netsh wlan show interfaces` command, which lists details about wireless interfaces. It then looks for the line containing "SSID" and extracts the name from it.
+
+2. Function: `get_wifi_password`:
+   - Purpose: Retrieves the password for a given Wi-Fi profile.
+   - How: It executes the `netsh wlan show profile [profile_name] key=clear` command, where `[profile_name]` is the name of the Wi-Fi profile. It looks for the line containing "Key Content" and extracts the password from it.
+
+3. Function: `main`:
+   - Purpose: Orchestrates the process by first fetching the connected Wi-Fi name and then getting the password for that network.
+   - How: It calls the `get_connected_wifi_name` function to get the current Wi-Fi network name and then uses `get_wifi_password` to retrieve and print the password.

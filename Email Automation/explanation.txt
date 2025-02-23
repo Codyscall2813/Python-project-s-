@@ -1,0 +1,44 @@
+### 1. Modules and Installation
+
+— Modules Used:
+  — `csv`: This is a standard Python module used to read and write CSV (Comma—Separated Values) files. It's included in Python's standard library, so no installation is required.
+  — `email.message`: This module is part of the Python standard library and is used to create and handle email messages. No installation is needed.
+  — `smtplib`: This is another standard library module that provides functions to send emails using the Simple Mail Transfer Protocol (SMTP). No installation is needed.
+
+### 2. Purpose of the Code
+
+The code is designed to send emails to a list of recipients. It reads email credentials and recipient addresses from files, logs into an SMTP server (specifically Gmail in this case), and sends a predefined email to each recipient listed in a CSV file.
+
+### 3. How the Code Works
+
+#### Reading Email Credentials
+
+— `get_credentials(filepath)`: 
+  — This function reads email credentials (email address and password) from a specified file. The credentials are necessary to log into the SMTP server.
+  — It handles errors if the file is not found or if there is an issue reading the file.
+
+#### Logging into the SMTP Server
+
+— `login(email_address, email_pass, s)`:
+  — This function logs into the SMTP server using the email address and password obtained from the credentials file.
+  — It uses the `smtplib` module to connect to the SMTP server, start a secure connection, and authenticate with the provided credentials.
+  — The function handles errors related to authentication and connection issues.
+
+#### Sending Emails
+
+— `send_mail()`:
+  — This function orchestrates the process of sending emails.
+  — It specifies the SMTP server (Gmail) and port number.
+  — It uses the `get_credentials()` function to obtain the email credentials.
+  — It establishes a connection to the SMTP server and logs in using the `login()` function.
+  — It creates an email message with a subject and body text.
+  — It reads the list of recipient email addresses from a CSV file. For each recipient, it sends the email message.
+  — It handles errors if the CSV file is not found or if any other issues occur during the email sending process.
+
+#### Running the Program
+
+— When the script is run, the `send_mail()` function is executed. It will attempt to log in to the SMTP server, read the recipients from the CSV file, and send the email to each recipient. The program prints messages to indicate the success or failure of each step.
+
+### Summary
+
+This code automates the process of sending emails to a list of recipients. It reads necessary credentials from a file, logs into an SMTP server, and sends an email to each recipient listed in a CSV file. This can be useful for bulk email notifications, newsletters, or similar tasks.

@@ -1,0 +1,37 @@
+### 1. Modules to Install
+
+— `opencv—python` (cv2): This library is used for image processing and computer vision tasks, such as face and eye detection. You can install it using pip with the command: `pip install opencv-python`.
+
+### 2. Purpose of the Code
+
+The code is designed to use your computer's webcam to detect faces and eyes in real-time. It displays a window showing the video feed from the webcam with rectangles drawn around detected faces and eyes. You can stop the program by pressing the 'q' key.
+
+### 3. How the Code Works
+
+#### 1. Loading Pre—trained Models
+
+— Cascade Classifiers: The code uses pre-trained models, called cascade classifiers, for detecting faces and eyes. These models are files that contain patterns for recognizing faces and eyes. These files are loaded into the program from a specific directory.
+
+#### 2. Opening the Webcam
+
+— Video Capture: The code opens a connection to your webcam using the `VideoCapture` function. This allows the program to start receiving live video feed from the webcam.
+
+#### 3. Processing Each Frame
+
+— Capture Frames: The program continuously captures frames (images) from the video feed.
+— Convert to Grayscale: To improve performance, each frame is converted to grayscale. This simplifies the image and speeds up the detection process.
+— Detect Faces and Eyes: The grayscale image is analyzed to detect faces and eyes. The detected faces and eyes are identified by rectangles drawn around them.
+
+#### 4. Displaying the Results
+
+— Show Video Feed: The processed frames, with rectangles around faces and eyes, are displayed in a window. This window updates in real—time to show the live video feed.
+
+#### 5. Exiting the Program
+
+— Wait for User Input: The program continuously checks if the 'q' key has been pressed. If so, it will exit the loop and close the program.
+
+#### 6. Clean Up
+
+— Release Resources: When the program ends (after pressing 'q'), it releases the webcam and closes all windows to free up resources.
+
+This code provides a real—time facial and eye detection system using your webcam. It loads models for detecting faces and eyes, processes the video feed to find these features, displays the results, and allows you to exit the program with a key press.

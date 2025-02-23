@@ -1,0 +1,33 @@
+#### 1. Modules to Install
+To run this code, you need to install the following modules:
+— `sqlite3` (This is included with Python, so no need to install separately.)
+— `tkinter` (Also included with Python.)
+— `ttkbootstrap` (You can install it using the following command): `pip install ttkbootstrap`
+
+#### 2. What Does the Code Do?
+
+This code creates a simple flashcards application. Users can create sets of flashcards, add individual cards to these sets, and then review the cards in a learning mode. The application uses a graphical user interface (GUI) to interact with the user and an SQLite database to store the flashcard sets and their contents.
+
+#### 3. How the Code Works
+
+1. Database Setup:
+   — Tables Creation: The code first sets up an SQLite database to store flashcard sets and individual flashcards. Two tables are created: one for the flashcard sets and one for the flashcards themselves.
+
+2. Database Operations:
+   — Adding Flashcard Sets and Cards: Functions are provided to add new flashcard sets and individual flashcards to the database.
+   — Retrieving Data: Functions to get a list of flashcard sets and retrieve flashcards for a specific set are included.
+   — Deleting Sets: A function to delete a flashcard set and its associated cards is also available.
+
+3. GUI Setup:
+   — Main Window: The application window is created with a title and size. The GUI uses `tkinter` for the interface and `ttkbootstrap` for styling.
+   — Tabs for Different Operations: The GUI is divided into tabs using `ttk.Notebook`, with separate tabs for creating flashcard sets, selecting sets, and learning with flashcards.
+
+4. GUI Elements and Functionality:
+   — Create Set Tab: Users can enter a set name, add words and definitions to the set, and save it.
+   — Select Set Tab: Users can select an existing flashcard set from a dropdown menu and delete sets if needed.
+   — Learn Mode Tab: Users can review flashcards. They can flip the card to see the definition, and navigate between cards using Next and Previous buttons.
+
+5. Main Loop:
+   — The code enters the main event loop of the GUI application. This loop keeps the application running and responsive to user actions, such as button clicks and menu selections.
+
+This code sets up a flashcards application that allows users to manage flashcard sets, add cards, and review them interactively. It combines database operations with a graphical user interface to provide a user—friendly experience for creating and studying flashcards.

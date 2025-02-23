@@ -1,0 +1,37 @@
+### 1. Modules and Installation
+
+— Modules Used:
+  — `hashlib`: This is a Python module that provides secure hash functions, which are commonly used for data integrity and authentication. It is a part of the standard library, so no additional installation is needed.
+  — `os`: This is another standard library module in Python that provides a way to interact with the operating system. It includes functions for handling file paths, directories, and system—level operations.
+
+### 2. Purpose of the Code
+
+The code is designed to find and remove duplicate files in a specified directory. It does this by calculating a hash value (a unique identifier) for the contents of each file. If two files have the same hash value, they are considered duplicates, and the duplicate is deleted.
+
+### 3. How the Code Works
+
+#### Calculating File Hashes
+
+— `calculate_file_hash(filename)`:
+  — This function calculates the MD5 hash of a file's contents. The MD5 hash function generates a unique string (hash) for a given input, which is useful for identifying duplicate data.
+  — It reads the file in chunks of a specified size (BLOCK_SIZE) to avoid memory issues with large files.
+  — The function updates the hash with each chunk of data read from the file, and finally, returns the complete hash as a hexadecimal string.
+
+#### Identifying and Deleting Duplicates
+
+1. Directory Path: The directory to be scanned for duplicate files is specified by the variable `directory_path`. This should be set to the path of the directory where you want to check for duplicates.
+
+2. Hash Map: The program uses a dictionary called `hash_map` to store the hash values of files as keys and their corresponding file paths as values. This helps in quickly checking if a file with the same content (same hash) has already been encountered.
+
+3. File Listing: The `os.listdir()` function retrieves a list of all files in the specified directory. The program then constructs the full path for each file and checks if it is indeed a file (not a directory) using `os.path.isfile()`.
+
+4. Processing Each File: For each file in the directory:
+   — The code calculates its hash using the `calculate_file_hash()` function.
+   — If the hash is already in the `hash_map`, it means another file with the same content has been encountered, and the current file is considered a duplicate. This file is added to the `deleted_files` list and deleted from the system using `os.remove()`.
+   — If the hash is not in the `hash_map`, it is added to the dictionary, associating the hash with the file's path.
+
+5. Reporting Results: After processing all files, the program checks if any duplicates were found and deleted. It then prints the paths of these deleted files. If no duplicates were found, it prints a message indicating that.
+
+### 4. Running the Program
+
+To run the program, you should set the `directory_path` to the path of the directory you want to clean up. The script will then execute and remove any duplicate files it finds, displaying the results in the terminal.

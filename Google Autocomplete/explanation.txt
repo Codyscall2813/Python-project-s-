@@ -1,0 +1,24 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the following Python module:
+— `requests` (You can install it using the following command): `pip install requests`
+
+The `json` module is part of Python's standard library, so there's no need to install it separately.
+
+#### 2. What Does the Code Do?
+
+This code is a simple command-line tool that fetches and displays search suggestions from Google based on user input. When a user enters a search query, the tool makes a request to Google's autocomplete service to get search suggestions and prints them out. It continues to prompt the user for new searches until they choose to exit.
+
+#### 3. How the Code Works
+
+1. Getting Search Suggestions:
+   — User Input: The program first prompts the user to enter a search query.
+   — Making a Request: It then sends a request to Google's autocomplete service. This service returns search suggestions related to the query.
+   — Processing the Response: The program receives the response from Google, which is in JSON format. It extracts and prints the search suggestions from this response.
+   — Error Handling: If there are issues with the request (like network problems or invalid responses), the program handles these errors gracefully and informs the user.
+
+2. User Interaction Loop:
+   — Continuous Input: After showing the suggestions for the current query, the program asks if the user wants to perform another search.
+   — Exiting the Program: If the user chooses not to continue, the program ends with a goodbye message. Otherwise, it repeats the process, allowing the user to enter a new search query.
+
+This code allows users to get and view search suggestions from Google in a command—line interface. It involves making HTTP requests to Google's autocomplete service, processing the returned data, and displaying relevant suggestions. The program includes error handling and user prompts to ensure smooth interaction and usability.

@@ -1,0 +1,39 @@
+#### 1. Modules to Install
+To run this code, you need to install the `pygame` module. You can install it using the following command: `pip install pygame`
+
+#### 2. What Does the Code Do?
+
+This code creates a simple version of the popular game "Flappy Bird" using the Pygame library. The game involves controlling a bird as it flies through a series of pipes. Here’s a breakdown of how the game functions:
+
+#### 3. How the Code Works
+
+1. Initialize Pygame:
+   — The code starts by setting up the Pygame library and defining some constants for the game, such as screen dimensions, speed of objects, and gravity.
+
+2. Set Up Display:
+   — It creates a window where the game will be displayed, sets the title of the window, and assigns an icon to it.
+
+3. Load Images:
+   — The code loads various images used in the game, including the background, floor, bird images (for different flap positions), pipes, and the game over screen.
+
+4. Set Up Game Objects:
+   — Bird: The bird’s initial position is set, and it’s prepared to flap its wings at a regular interval.
+   — Pipes: It sets up a timer to create new pipes at intervals and initializes the list of pipes.
+   — Score: Initializes the score and high score, and prepares the font for displaying scores.
+
+5. Helper Functions:
+   — `draw_floor`: Handles the drawing and scrolling of the floor.
+   — `create_pipe_pair`: Generates a pair of pipes with random heights.
+   — `animate_pipes`: Moves the pipes across the screen and checks for collisions with the bird.
+   — `draw_score`: Displays the current score and high score on the screen.
+   — `update_score`: Updates the score when the bird passes through pipes.
+
+6. Main Game Loop:
+   — Event Handling: Handles user inputs and game events. For example, pressing the space bar makes the bird flap, and if the game is over, pressing the space bar resets the game.
+   — Game Logic: Updates the bird’s position based on gravity, rotates the bird for a flapping effect, checks for collisions with pipes or screen edges, and updates the game state.
+   — Rendering: Draws the background, bird, pipes, score, and floor on the screen. If the game is over, it displays the game over image.
+
+7. Update and Exit:
+   — Continuously updates the display and handles the end of the game by quitting Pygame and closing the program when the user exits the window.
+
+This code creates a graphical game where a player controls a bird trying to navigate through pipes by flapping. The bird falls due to gravity, and the player needs to press the space bar to make the bird fly upwards. The game keeps track of the score and displays it, along with the high score, when the game ends. The code handles all aspects of the game, including graphics, user input, and game logic.

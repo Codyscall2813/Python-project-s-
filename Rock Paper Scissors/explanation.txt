@@ -1,0 +1,30 @@
+#### 1. Modules to Install
+
+You don't need to install any external modules to run this code. It uses only Python's built-in features and the `random` module, which is included with Python.
+
+#### 2. What Does the Code Do?
+
+This code implements a simple text-based game of Rock, Paper, Scissors. Here’s how it works:
+
+#### 3. How Does the Code Work?
+
+1. User Choice:
+   - The game prompts the user to choose between Rock, Paper, or Scissors. The user's input is then validated to ensure it's one of these three choices. If the input is invalid, the user is asked to choose again.
+
+2. Computer Choice:
+   - The computer makes a random choice from Rock, Paper, or Scissors using the `random` module. This simulates the computer's decision in the game.
+
+3. Determine the Winner:
+   - After both the user and the computer have made their choices, the game compares them to determine the winner:
+     - Rock beats Scissors.
+     - Scissors beats Paper.
+     - Paper beats Rock.
+   - If both choices are the same, the result is a tie.
+
+4. Game Loop:
+   - The game is played in a loop, allowing the user to play multiple rounds. After each round, the user is asked if they want to play again. If they choose not to, the game ends with a thank you message.
+
+5. Interaction:
+   - The code interacts with the user through text prompts and responses. It provides feedback on the choices made and the outcome of each round.
+
+In this Rock, Paper, Scissors game, you play against the computer. You make a choice between Rock, Paper, or Scissors, and the computer makes a random choice. The game determines the winner based on the rules of Rock, Paper, Scissors and displays the result. You can play multiple rounds, and the game will continue until you choose not to play anymore. The program handles user input, generates random choices, and determines the winner using simple conditional logic.

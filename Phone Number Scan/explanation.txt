@@ -1,0 +1,33 @@
+#### 1. Modules to Install
+
+For this code to work, you need to install the following Python modules:
+— `phonenumbers`: This module is used for parsing, formatting, and validating phone numbers.
+— `tabulate`: This module is used to format data into a table-like string output.
+
+You can install these modules using the following commands in your terminal: `pip install phonenumbers tabulate`
+
+
+#### 2. What Does the Code Do?
+
+The code takes a phone number as input and provides information about the phone number, such as the country it is associated with and the name of the carrier (phone service provider).
+
+#### 3. How Does the Code Work?
+
+1. Import Modules:
+   — `phonenumbers`: This module helps in parsing and extracting information from phone numbers.
+   — `carrier` and `geocoder`: These are components of the `phonenumbers` module used to get the carrier name and geographical description of the phone number.
+   — `tabulate`: This module is used to format the extracted information into a neat table.
+
+2. Function to Extract Phone Number Information:
+   — `phone_number_scanner`: This function takes a phone number as input.
+     — It parses the phone number using the `phonenumbers.parse` function.
+     — It uses `geocoder.description_for_number` to get a description of the country associated with the phone number.
+     — It uses `carrier.name_for_number` to get the name of the carrier or service provider.
+     — The function then formats this information into a table with two columns: "Country" and "Supplier".
+     — It converts this table into a formatted string using `tabulate`.
+
+3. Main Execution:
+   — When the script is run, it prompts the user to enter a phone number.
+   — It then calls the `phone_number_scanner` function with the entered phone number and prints the formatted information.
+
+This code is a simple tool for looking up information about phone numbers. It provides details on the geographic location and the service provider associated with the phone number. The `phonenumbers` library is used for parsing and obtaining information, while `tabulate` is used to present the results in a readable table format.

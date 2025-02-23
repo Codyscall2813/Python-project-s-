@@ -1,0 +1,34 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the following modules:
+— `pyqrcode`: For generating QR codes.
+— `pyzbar`: For decoding QR codes from images.
+— `Pillow` (often imported as `PIL`): For handling image files.
+
+You can install these modules using `pip` with the following commands:
+```
+pip install pyqrcode
+pip install pyzbar
+pip install pillow
+```
+
+#### 2. What Does the Code Do?
+
+This code provides a simple interface to generate and read QR codes. QR codes are two—dimensional barcodes that can store information such as text, URLs, or other data.
+
+#### 3. How Does the Code Work?
+
+1. Generating QR Codes:
+   — The code defines a function to generate a QR code. This function creates a QR code from a piece of text or URL and saves it as an image file (in PNG format). The QR code image is saved with a scale factor to make it larger and clearer.
+
+2. Reading QR Codes:
+   — Another function is defined to read QR codes from an image file. It opens the image file, decodes the QR code, and extracts the encoded data. If the QR code is successfully decoded, it prints the information contained in the QR code. If no QR code is found, it informs the user.
+
+3. User Interface:
+   — The code includes a simple menu-driven interface for users to interact with:
+     — Option 1: Allows the user to input text or a URL and generate a QR code for it.
+     — Option 2: Allows the user to input the filename of a QR code image and read the information encoded in that QR code.
+     — Option 3: Exits the program.
+   — The program continuously displays the menu and processes user choices until the user decides to exit.
+
+This code allows users to generate QR codes and read QR codes from images. After installing the necessary modules, users can generate QR codes for any text or URL and save them as images. They can also read QR codes from image files to retrieve the encoded data. The code provides a straightforward menu system for these tasks.

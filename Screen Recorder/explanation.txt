@@ -1,0 +1,41 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the following modules:
+
+1. OpenCV (`cv2`): For handling video recording and processing.
+2. PyAutoGUI (`pyautogui`): For capturing screenshots of the screen.
+3. pywin32 (`win32api`): For getting screen dimensions on Windows.
+
+You can install these modules using pip:
+- `pip install opencv-python`
+- `pip install pyautogui`
+- `pip install pywin32`
+
+#### 2. What Does the Code Do?
+
+This code records a video of your screen for a specified duration and saves it as a video file. Here’s a step-by-step overview of how it works:
+
+#### 3. How Does the Code Work?
+
+1. Get Screen Dimensions:
+   - The code retrieves the dimensions of the screen (width and height) using the `win32api` module. This ensures that the recording captures the full screen.
+
+2. Set Up Video Recording:
+   - A `VideoWriter` object from OpenCV is created to handle the video recording. The codec used is XVID, and the video will be recorded at 30 frames per second (fps). The output video file will be named "ScreenRecord.mp4".
+
+3. Set Recording Duration:
+   - The duration for which the screen will be recorded is set (10 seconds in this case). The end time for recording is calculated based on the current time and the specified duration.
+
+4. Start Recording:
+   - The recording loop begins, and screenshots of the screen are taken repeatedly using PyAutoGUI. Each screenshot is converted into a format suitable for video recording using NumPy and OpenCV.
+
+5. Show Recording in a Window:
+   - Each frame of the recording is displayed in a window titled "Recording". This window shows what is being recorded in real-time.
+
+6. Check for Early Stop:
+   - The loop checks if the user presses the 'q' key. If 'q' is pressed, the recording stops early.
+
+7. Finish Recording:
+   - Once the recording duration is reached or the user stops it early, the `VideoWriter` object is released, and all OpenCV windows are closed. The recorded video is saved as "ScreenRecord.mp4".
+
+This code captures a video of your screen for a specified duration or until you press 'q'. It uses PyAutoGUI to take screenshots, OpenCV to handle video encoding and display, and `win32api` to get the screen size. The recording is saved as an MP4 file, and you can view the recording progress in real-time in a display window.

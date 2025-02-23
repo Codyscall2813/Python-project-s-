@@ -1,0 +1,37 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the `tkinter` module, which is included with most Python installations. This module provides tools to create graphical user interfaces (GUIs). No additional modules are required beyond those included with Python.
+
+#### 2. What Does the Code Do?
+
+This code creates a Pomodoro Timer application using a graphical user interface. The Pomodoro Technique involves working for a set period (e.g., 25 minutes) followed by a short break (e.g., 5 minutes). After completing a set number of cycles, it prompts for a longer break. The application allows you to set custom times for work and breaks, start and stop the timer, and skip between work and break periods.
+
+#### 3. How Does the Code Work?
+
+1. GUI Setup:
+   — The application window is created using `tkinter`. It has a specific size and title and displays an icon.
+   — Four tabs are added to the window: Pomodoro, Short Break, Long Break, and Settings. Each tab has its own timer label and settings.
+
+2. Layout and Controls:
+   — On the main interface, there are labels to show the current time for the Pomodoro, short break, and long break.
+   — Below the timers, there are buttons for starting, skipping, and resetting the timer, as well as a label to display the number of completed Pomodoro cycles.
+   — In the Settings tab, you can enter custom durations for the Pomodoro and breaks.
+
+3. Timer Functionality:
+   — The application has a countdown timer that updates every second. It adjusts the displayed time based on the selected tab (Pomodoro, short break, or long break).
+   — When the timer ends, it automatically switches to the next period (short break or long break) and updates the Pomodoro count accordingly.
+   — Users can skip the current period or reset the timer to restart the process.
+
+4. Timer Control:
+   — Start Button: Starts the timer based on the selected tab. It checks if the timer is already running to prevent overlapping sessions.
+   — Skip Button: Skips the current period and moves to the next one.
+   — Reset Button: Stops the timer, resets it, and clears the Pomodoro count.
+
+5. Settings:
+   — Users can modify the durations for work and breaks in the Settings tab. The application validates these inputs to ensure they are positive numbers.
+
+6. Handling State and User Input:
+   — The application handles user inputs for timer settings and provides feedback if the input is invalid.
+   — It updates the timer display and internal state according to user interactions and timer progress.
+
+This Pomodoro Timer application provides a user-friendly way to manage work and break periods using a graphical interface. It supports custom durations for work and breaks, tracks completed Pomodoro cycles, and includes buttons for starting, skipping, and resetting the timer. The code leverages `tkinter` to create and manage the GUI, allowing for an interactive and customizable timer experience.

@@ -1,0 +1,29 @@
+### 1. Module to Install
+— The code uses the `pygame` library, which is essential for creating graphical applications like games. To use this code, you need to install `pygame` by running `pip install pygame`.
+
+### 2. Purpose of the Code
+— The main purpose of this code is to create a graphical chess game. It sets up a chessboard, places pieces, and allows for interaction, such as selecting and moving pieces.
+
+### 3. Initialization and Setup
+— The code starts by importing necessary modules and initializing `pygame`. Then, it sets up the main display window with a size of 640x640 pixels and titles it "Chess".
+
+### 4. Board and Pieces
+— The chessboard is represented as a list of lists (`grid`), where each inner list represents a row on the board, and each element within these lists represents a chess piece or an empty square.
+— The pieces are represented by single characters: lowercase for black pieces (e.g., 'r' for a rook) and uppercase for white pieces (e.g., 'K' for the king).
+
+### 5. Piece Movements
+— The `ValidMoveGenerator` class is designed to generate valid moves for each piece based on its type and current position. It contains methods for each piece type, like `King`, `Queen`, `Rook`, `Bishop`, `Knight`, and `Pawn`, which calculate possible moves according to chess rules.
+
+### 6. Board Drawing
+— The `Board` class manages the graphical representation of the board and pieces. It creates the board with alternating colors for squares and loads images for the chess pieces. The methods in this class are responsible for drawing the board and placing pieces in their respective positions.
+
+### 7. User Interaction
+— User interaction is managed through mouse events, allowing players to select and move pieces. The `Event` class handles these interactions, including checking if a move is valid, updating the game state, and redrawing the board as needed.
+
+### 8. Game Logic
+— The code includes logic to check if a move places the player's king in check, ensuring that players make legal moves.
+
+### 9. Game Loop
+— Although not fully shown here, games typically run in a loop where events are processed, the game state is updated, and the screen is refreshed.
+
+This code essentially builds the foundation for a basic chess game, allowing players to interact with the game via a graphical interface, with proper rules and logic for chess gameplay.

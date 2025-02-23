@@ -1,0 +1,42 @@
+### 1. Modules and Installation
+
+— Modules Used:
+  — `tkinter`: This is a standard Python library for creating graphical user interfaces (GUIs). It comes pre—installed with Python, so no additional installation is needed.
+  — `ttkbootstrap`: This is a library that provides modern themes and styles for Tkinter applications. You need to install it using `pip install ttkbootstrap`.
+  — `requests`: This library is used to make HTTP requests, which is useful for interacting with web APIs. You can install it using `pip install requests`.
+
+### 2. Purpose of the Code
+
+This code creates a simple dictionary application. The user can enter a word, and the application will fetch and display its definition using an online dictionary API.
+
+### 3. How the Code Works
+
+#### Fetching Definitions
+
+— `get_definition(word)`:
+  — This function takes a word as input and uses the `requests` library to fetch its definition from the [Dictionary API](https://api.dictionaryapi.dev/).
+  — It sends a request to the API endpoint, including the word as part of the URL.
+  — If the response from the API is successful (status code 200), it extracts the meanings and definitions from the JSON data returned by the API.
+  — The function then formats these definitions, including the part of speech (e.g., noun, verb) and the definition itself, and returns this formatted string.
+
+#### Handling User Interaction
+
+— `search_definition()`:
+  — This function is triggered when the user clicks the "Search" button.
+  — It retrieves the word entered by the user, calls `get_definition(word)` to get the definition, and displays the result in a text box.
+  — The text box is configured to be read—only to prevent the user from accidentally modifying the displayed definition.
+
+### 4. GUI Components
+
+— The code uses `Tkinter` and `ttkbootstrap` to create a user—friendly interface.
+— Window Setup:
+  — The main window is set up with a title ("Dictionary App") and a specific size (500x300 pixels).
+  — The `Style` class from `ttkbootstrap` is used to apply a modern theme to the widgets.
+— Input and Output Fields:
+  — The interface includes an entry field where users can type a word, a button to initiate the search, and a text box to display the definition.
+  — Widgets like `Label`, `Entry`, and `Button` from `ttk` are used for input and output components, styled using the `ubuntu_font` setting for consistency and readability.
+
+### 5. Event Handling
+
+— The application uses an event—driven model typical of GUIs.
+— When the "Search" button is clicked, the `search_definition()` function is called, which updates the text box with the definition of the entered word.

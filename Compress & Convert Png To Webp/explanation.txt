@@ -1,0 +1,19 @@
+### 1. Module Installation
+First, the user needs to install the `PIL` module, which is part of the `Pillow` library. This library is used for opening, manipulating, and saving many different image file formats. To install Pillow, they can use the command: `pip install Pillow`.
+
+### 2. Purpose of the Code
+This code is designed to convert an image from PNG format to WebP format while optionally compressing the image. The WebP format often results in smaller file sizes compared to PNG, which can be beneficial for saving space and speeding up web page loading times.
+
+### 3. Function Overview
+The code defines a function named `convert_and_compress_png_to_webp`. This function takes three parameters:
+— `input_path`: The file path of the PNG image that needs to be converted.
+— `output_path`: The file path where the converted WebP image will be saved.
+— `quality`: An optional parameter that specifies the quality of the output image, ranging from 1 to 100. A higher value means better quality but larger file size.
+
+### 4. How It Works
+— The function begins by opening the PNG image specified by `input_path`.
+— It then checks the image's color mode. If the image has an alpha channel (RGBA mode, which includes transparency information), it converts the image to RGB mode (which does not include transparency) to ensure compatibility with the WebP format.
+— Finally, the function saves the image in WebP format at the specified `output_path`, using the `quality` parameter to determine the compression level.
+
+### 5. Practical Example
+The code concludes with an example of how to use the function, converting a PNG image located at a specific path and saving the WebP version to another path, with a specified quality setting of 85.

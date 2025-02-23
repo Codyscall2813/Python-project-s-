@@ -1,0 +1,31 @@
+### 1. Module Installation
+The code uses the `requests` module, which is a popular library for making HTTP requests in Python. To use this code, the user needs to install `requests` by running the command: `pip install requests`.
+
+### 2. Purpose of the Code
+This code fetches current exchange rates from an external API and uses them to convert amounts from one currency to another. It allows users to input an amount and specify the currencies for conversion, providing the equivalent value in the target currency.
+
+### 3. How the Code Works
+
+#### Fetching Exchange Rates
+— `fetch_exchange_rates()` Function: This function sends a request to a currency exchange API using the provided URL and API key. It requests the latest exchange rates for a wide range of currencies.
+  — The API key is used to authenticate the request.
+  — The response from the API is in JSON format, containing the exchange rates.
+  — If the request is successful (HTTP status code 200), the function checks for a key called 'data' in the response, which contains the actual rates. It returns this data if found. If the data is not found or an error occurs, the function prints an error message and returns `None`.
+
+#### Converting Currency
+— `convert_currency()` Function: This function uses the data fetched by `fetch_exchange_rates()` to perform the currency conversion.
+  — It accepts three parameters: the amount to convert, the source currency (`from_currency`), and the target currency (`to_currency`).
+  — It calculates the converted amount using the exchange rates. It first checks if the specified currencies are available in the fetched data. If they are, it performs the conversion using the formula: `amount * (target currency rate / source currency rate)`.
+  — If the currencies are not available or if the rates cannot be fetched, the function prints an error message and returns `None`.
+
+#### User Interaction and Main Function
+— `main()` Function: This is the entry point of the program.
+  — It prompts the user to input the amount they want to convert and the source and target currencies.
+  — It calls `convert_currency()` with the user's inputs to get the converted amount.
+  — If the conversion is successful, it prints the result in a readable format. If not, it informs the user that the conversion failed.
+
+### 4. Error Handling
+The code includes error handling to manage issues like network errors, missing data in the API response, or unsupported currencies. This helps ensure that the program provides informative feedback to the user in case of problems.
+
+### 5. API Key and Security
+The API key used in the code is necessary to access the exchange rate service. Users should be aware that API keys are sensitive and should be protected. In real applications, API keys should not be hardcoded into the source code. Instead, they should be stored in environment variables or secure configurations.

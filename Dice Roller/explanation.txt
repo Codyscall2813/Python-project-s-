@@ -1,0 +1,35 @@
+### 1. Modules and Installation
+
+— Module Used:
+  — `random`: This is a standard Python module that provides functions for generating random numbers. It comes pre—installed with Python, so there's no need for additional installation.
+
+### 2. Purpose of the Code
+
+This code simulates a simple dice—rolling game. The user can roll a virtual six—sided dice, and the program will display the result. The user can choose to roll the dice again or exit the game.
+
+### 3. How the Code Works
+
+#### Rolling the Dice
+— `roll_dice()` Function:
+  — This function simulates rolling a dice. It uses the `random.randint()` function from the `random` module to generate a random number between 1 and 6, inclusive. This number represents the result of the dice roll.
+
+#### Main Functionality
+— `main()` Function:
+  — This is the main function that controls the flow of the game.
+  — The game runs in a loop, allowing the user to roll the dice multiple times.
+  — When the game starts, it displays a message indicating that the dice are being rolled.
+  — It calls the `roll_dice()` function to get a random number, which it then displays as the result of the roll.
+  — After showing the result, the program asks the user if they want to roll the dice again.
+  — The user's input is processed to determine whether to continue the loop (if the user types 'y') or to end the game (if the user types anything other than 'y').
+  — If the game ends, it thanks the user for playing.
+
+### 4. User Interaction
+
+— The game interacts with the user through the console. It prompts the user to decide whether to roll the dice again after each roll.
+— The user provides input by typing 'y' to roll again or any other key to exit.
+
+### 5. Execution Flow
+
+— When the script is run, the `main()` function is called.
+— The game enters a loop where it rolls the dice and displays the result.
+— The loop continues until the user chooses to stop playing by entering something other than 'y'.

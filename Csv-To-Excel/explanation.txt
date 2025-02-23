@@ -1,0 +1,28 @@
+### 1. Module Installation
+The code uses the `openpyxl` module, which is used for reading and writing Excel files (with .xlsx extension) in Python. To use this code, the user needs to install `openpyxl` by running the command: `pip install openpyxl`.
+
+### 2. Purpose of the Code
+This code is designed to read data from a CSV (Comma-Separated Values) file and write that data into an Excel file. A CSV file is a simple text file that stores tabular data, with each line representing a row and columns separated by a specified delimiter, like a comma or a semicolon. An Excel file, on the other hand, is a spreadsheet that can store data in multiple sheets.
+
+### 3. How the Code Works
+
+#### User Input
+The program begins by prompting the user to enter:
+— The name of the CSV file from which to read data.
+— The separator (delimiter) used in the CSV file (e.g., comma, semicolon).
+— The name of the Excel file to which the data should be written.
+— The name of the sheet in the Excel file where the data will be written.
+
+These inputs ensure that the program knows where to find the input data and where to save the output.
+
+#### Processing the Files
+— Loading the Excel Workbook: The program attempts to open the specified Excel file. If the file does not exist, it will create a new one. It also tries to access the specified sheet in the workbook.
+— Reading the CSV File: The program opens the CSV file in read mode. It reads the file line by line, splitting each line into individual data items based on the provided separator.
+— Writing to the Excel Sheet: For each line of the CSV file, the program writes the data into the Excel sheet. It does this by placing each data item into the appropriate cell, iterating through rows and columns.
+
+#### Saving the Excel File
+After all the data has been written, the program saves the changes to the Excel file. If an error occurs at any point (such as if the specified files do not exist or there is an issue with file access), the program catches the error and prints an error message.
+
+### 4. Additional Considerations
+— File Paths: The program expects the CSV and Excel files to be in the same directory as the script. If the files are in different directories, the user needs to provide the full path to the files.
+— Error Handling: The program includes basic error handling to manage issues like missing files or incorrect file formats.

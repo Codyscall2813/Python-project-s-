@@ -1,0 +1,33 @@
+### What You Need to Install
+This code uses the `tkinter` library, which is a built-in Python module for creating graphical user interfaces (GUIs). If you are using a standard Python installation, you typically don't need to install `tkinter` separately, as it comes included with Python.
+
+### What This Code Does
+The code creates a simple digital clock application using a GUI. Here's how it works:
+
+1. Importing Necessary Modules: 
+   — `tkinter` is imported with an alias `tk` for creating the GUI elements.
+   — The `time` module is imported to work with time-related functions.
+   — The `font` module from `tkinter` is imported as `tkfont` to customize the appearance of text in the GUI.
+
+2. Updating the Time: 
+   — A function called `update_time` is defined to get the current time using the `time` module and update the text displayed in the GUI. This function uses a 12—hour format (with AM/PM) for the time display.
+   — The `time.strftime()` function formats the current time into a string.
+   — The `time_label.config()` method updates the displayed time in the GUI.
+   — The `after()` method is used to call the `update_time` function every 1000 milliseconds (1 second), which refreshes the displayed time continuously.
+
+3. Creating the Main Window:
+   — The main window of the application is created using `tk.Tk()`, which initializes a new Tkinter window.
+   — The title of the window is set to "Digital Clock".
+   — The size of the window is set to 800 pixels wide and 200 pixels tall.
+   — The background color of the window is set to purple.
+
+4. Customizing the Time Display:
+   — A custom font is created using `tkfont.Font()`, specifying the font family, size, and weight. In this case, the font family is "DS-Digital", which mimics the appearance of digital clocks.
+   — A label (`time_label`) is created to display the time. The label uses the custom font and has a blue background and white text.
+   — The label is packed into the main window using the `pack()` method, which organizes the label to expand and fill the available space.
+
+5. Starting the Application:
+   — The `update_time()` function is called once to initialize the display with the current time.
+   — The `root.mainloop()` method starts the main event loop of the application, which waits for user interactions and updates the GUI as needed. This loop continues running until the application is closed.
+
+This code sets up a digital clock display in a window that continuously updates every second to show the current time in a 12-hour format with AM/PM indication.

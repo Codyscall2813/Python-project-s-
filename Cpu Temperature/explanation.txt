@@ -1,0 +1,28 @@
+### 1. Module Installation
+The code uses the `psutil` module, which is a cross-platform library for accessing system details and utilities. This includes information about CPU, memory, disk usage, and more. To use this code, the user needs to install `psutil` by running the command: `pip install psutil`.
+
+### 2. Purpose of the Code
+This code is designed to monitor system statistics, specifically:
+— The CPU temperature.
+— RAM (memory) utilization.
+— CPU usage percentage.
+
+These metrics can help in understanding system performance and diagnosing potential hardware issues.
+
+### 3. Functions in the Code
+
+#### Getting CPU Temperature
+— `get_cpu_temperature()` Function: This function attempts to read the CPU temperature using `psutil`. It checks if the temperature data is available under the 'coretemp' category. If it finds the data, it returns the current temperature in Celsius. If the data is not available or if an error occurs, it returns "NA" to indicate that the temperature could not be retrieved.
+
+#### Getting RAM and CPU Utilization
+— `get_ram_and_cpu_util()` Function: This function gathers information about the system's RAM and CPU usage.
+  — It uses `psutil.virtual_memory()` to get details about RAM. It returns the total RAM available (in megabytes) and the percentage of RAM currently used.
+  — It also uses `psutil.cpu_percent(interval=4, percpu=True)` to measure CPU usage percentage over a 4—second interval for each CPU core.
+
+### 4. Displaying the Information
+After collecting the data, the code prints the information:
+— CPU Temperature: It shows the current CPU temperature if available; otherwise, it shows "NA".
+— CPU Utilization: It formats and displays the CPU usage percentage for each core. If the data for multiple cores is available, it lists the usage for each core.
+— RAM Utilization: It shows the percentage of RAM being used and the total RAM available in megabytes.
+
+This information is useful for monitoring the health and performance of a computer system, helping users understand how their system resources are being used.

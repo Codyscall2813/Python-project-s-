@@ -1,0 +1,50 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the following Python libraries:
+- `requests`: For sending HTTP requests.
+- `beautifulsoup4`: For parsing HTML content.
+
+You can install these using pip: `pip install requests beautifulsoup4`
+
+#### 2. What Does the Code Do?
+
+This code creates a program to download TikTok videos by performing the following tasks:
+
+1. Getting the Video URL:
+   - The program starts by taking a TikTok video URL from the user.
+   - It sends this URL to an API endpoint via a POST request to fetch the download link for the video.
+
+2. Fetching the Download Link:
+   - The API responds with HTML content.
+   - The program uses `BeautifulSoup` to parse this HTML and search for a link to download the video in MP4 HD format.
+   - If the download link is found, it returns this link; otherwise, it reports an error.
+
+3. Downloading the Video:
+   - Once a valid download link is obtained, the program sends another request to this link to download the video file.
+   - It saves the video to a file in a directory called "Tik_Saverrr" with a filename based on the video’s ID.
+
+4. Error Handling:
+   - The code includes error handling for various issues like HTTP errors, request failures, or unexpected errors during both fetching and downloading processes.
+
+5. User Interaction:
+   - The main function handles user interaction, repeatedly asking for TikTok video URLs and processing them until the user decides to exit.
+   - It creates a directory for saving videos if it doesn't already exist.
+
+#### How It Works
+
+- Setup:
+  - The program initializes by creating a directory to store downloaded videos.
+
+- User Input:
+  - The user is prompted to enter TikTok video URLs.
+  - For each URL, the program sends a request to the API to get a download link.
+
+- Processing:
+  - The program parses the response to find the appropriate download link.
+  - It then downloads the video from this link and saves it to the designated folder.
+
+- Completion:
+  - The user is informed if the video was successfully downloaded or if there was an issue.
+  - The process continues until the user decides to stop by typing 'exit'.
+
+This code provides a way to download TikTok videos by interacting with an API, handling responses, and saving the videos to a specified location on the user's computer.

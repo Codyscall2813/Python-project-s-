@@ -1,0 +1,30 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the requests library. This library allows you to send HTTP requests easily in Python. You can install it using the following command: `pip install requests`
+
+#### 2. What Does the Code Do?
+
+This code fetches and displays the current weather information for a specified city. Here’s a step-by-step explanation:
+
+1. Set Up API Details:
+   - The code starts with an API key and a base URL for accessing weather data from the OpenWeatherMap API. The API key is a unique identifier that allows access to the API service.
+
+2. Input City Name:
+   - The user is prompted to enter the name of a city for which they want to get the weather information.
+
+3. Formulate Request URL:
+   - Using the base URL, the code constructs a full URL for the API request. This URL includes the API key and the city name entered by the user.
+
+4. Send the Request:
+   - The code sends an HTTP request to the weather API using the constructed URL. It uses the requests library to do this.
+
+5. Check Response:
+   - After sending the request, the code checks if the response from the API is successful (indicated by a status code of 200). If successful, it proceeds to process the data.
+
+6. Process and Display Data:
+   - The code converts the response into a JSON format to easily extract the weather description and temperature.
+   - The temperature provided by the API is in Kelvin, so it converts it to Celsius.
+   - It then prints the weather description and the temperature in Celsius.
+
+7. Handle Errors:
+   - If the API request is not successful (i.e., status code is not 200), the code prints an error message indicating that something went wrong.

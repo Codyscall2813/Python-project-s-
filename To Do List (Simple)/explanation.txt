@@ -1,0 +1,57 @@
+#### 1. Modules to Install
+
+You do not need any external modules to run this code. It uses Python's built-in libraries:
+- `os`: For interacting with the operating system, such as clearing the screen.
+
+#### 2. What Does the Code Do?
+
+This code implements a simple command-line To-Do list application with the following features:
+
+1. Clearing the Screen:
+   - The application can clear the terminal or command prompt screen. It determines the operating system (Windows, macOS, or Linux) and uses the appropriate command to clear the screen.
+
+2. Displaying the Header:
+   - When the program starts or is refreshed, it displays a stylized header with text art. This adds a visual appeal to the application.
+
+3. Displaying the Menu:
+   - It shows a menu with options to add tasks, show tasks, mark tasks as done, or exit the application.
+
+4. Adding Tasks:
+   - Users can add multiple tasks to their to-do list. The application prompts the user for the number of tasks and then each task description.
+   - Each task is stored in a list with a status indicating whether it is completed or not.
+
+5. Showing Tasks:
+   - Users can view the list of tasks along with their completion status. The tasks are displayed with an index number, and their status is shown as either "Done" or "Not Done."
+
+6. Marking Tasks as Done:
+   - Users can mark a specific task as completed by providing its number. The application updates the task status and confirms the change.
+
+7. Exiting the Application:
+   - Users can exit the application from the menu. The program clears the screen and displays a farewell message before terminating.
+
+8. Error Handling:
+   - The application includes basic error handling to manage invalid inputs, such as non-numeric task counts or task numbers.
+
+#### How It Works
+
+- Initialization:
+  - The program initializes an empty list to store tasks.
+  - It displays the header and menu options.
+
+- User Interaction:
+  - Users choose from the menu options: add tasks, show tasks, mark tasks as done, or exit.
+
+- Adding Tasks:
+  - The program asks how many tasks the user wants to add and then collects each task's description.
+  - It stores each task as a dictionary with its description and status.
+
+- Showing Tasks:
+  - It displays all tasks with their current status.
+
+- Marking Tasks as Done:
+  - The user selects a task number to mark as completed. The application updates the task's status and confirms the action.
+
+- Exiting:
+  - The application clears the screen, shows a goodbye message, and exits.
+
+This code provides a simple text-based To-Do list management system where users can add tasks, view them, mark them as completed, and exit the program, all while interacting through a menu-driven interface.

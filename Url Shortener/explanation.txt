@@ -1,0 +1,36 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the following Python libraries:
+- `tkinter`: This is a standard Python module for creating graphical user interfaces (GUIs). It comes pre-installed with Python, so no separate installation is required.
+- `pyshorteners`: This library is used to shorten URLs. You can install it using `pip`, Python’s package manager.
+
+To install `pyshorteners`, use: `pip install pyshorteners`
+
+#### 2. What Does the Code Do?
+
+This code creates a graphical user interface (GUI) for a URL shortener application. Users can input a long URL, select a URL shortening service, and generate a shortened URL. They can also copy the shortened URL to their clipboard. Here’s a step-by-step explanation of how it works:
+
+1. Setting Up the GUI:
+   - The code creates a GUI window using `tkinter`. The window has various elements, including labels, text fields, and buttons.
+   - Labels are used to identify different sections of the interface, such as where to enter the URL and where to select the shortening service.
+   - Text fields allow users to input the long URL and view the shortened URL.
+   - A dropdown menu (combobox) lets users choose from various URL shortening services.
+
+2. Generating a Shortened URL:
+   - When the user clicks the "Generate" button, the `generate_shortened_url` function is called.
+   - This function retrieves the URL entered by the user and the selected shortening service from the dropdown menu.
+   - It checks if a URL has been entered; if not, it shows a warning message.
+   - The function then selects the appropriate URL shortening service using the `get_shortener_instance` function and generates a shortened URL.
+   - The shortened URL is displayed in a text field for the user to see.
+
+3. Copying the Shortened URL:
+   - When the user clicks the "Copy" button, the `copy_shortened_url` function is called.
+   - This function copies the shortened URL displayed in the text field to the system clipboard, making it easy for the user to paste it elsewhere.
+   - It also shows a message confirming that the URL has been copied.
+
+4. Selecting the Shortening Service:
+   - The `get_shortener_instance` function determines which URL shortening service to use based on the user’s selection from the dropdown menu.
+   - It returns the appropriate service object from the `pyshorteners` library based on the selected service.
+
+5. Running the Application:
+   - The application’s main event loop is started with `root.mainloop()`, which keeps the GUI window open and responsive to user interactions.

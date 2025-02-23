@@ -1,0 +1,28 @@
+#### 1. Modules to Install
+
+This code does not require any external modules or libraries. It uses basic Python features that come pre-installed with Python, so no additional installations are needed.
+
+#### 2. What Does the Code Do?
+
+This code implements a simple command-line voting system. Here’s how it works:
+
+1. Candidate Initialization:
+   - The code starts by defining a list of candidates, each with an initial vote count of zero.
+
+2. Display Candidates:
+   - There’s a function that prints out the names of all candidates. This helps voters see who they can vote for.
+
+3. Cast a Vote:
+   - Another function allows users to vote for a candidate. Users input the name of the candidate they wish to vote for.
+   - The code checks if the entered name matches one of the candidates. If it does, the vote count for that candidate is increased by one. If the name is not valid, the user is informed to try again.
+
+4. Display Results:
+   - A function is available to display the current voting results. It shows each candidate’s name along with the number of votes they have received.
+
+5. Main Menu:
+   - The `main` function provides a menu for the user with options to:
+     1. Display the list of candidates.
+     2. Cast a vote for a candidate.
+     3. Display the current voting results.
+     4. Exit the system.
+   - The menu is shown repeatedly until the user chooses to exit. The user’s choice is processed to call the appropriate function or show an error message if the choice is invalid.

@@ -1,0 +1,32 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the following Python libraries:
+- `cv2`: This module is part of OpenCV, a library for computer vision tasks. You can install it with `pip`: `pip install opencv-python`
+- `ffpyplayer`: This library is used for playing video and audio files. Install it with: ` pip install ffpyplayer`
+ 
+
+#### 2. What Does the Code Do?
+
+This code is a simple command-line video player that allows you to:
+1. List Video Files: Find all video files in a specified directory.
+2. Select a Video: Choose which video to play from the list.
+3. Play the Video: Display the video on the screen and play its audio.
+
+Here’s a step-by-step explanation:
+
+1. List Video Files:
+   - The code looks for files in a given directory that have video file extensions such as `.mp4`, `.avi`, `.mov`, etc.
+   - It gathers all these video files and provides a list to the user.
+
+2. Select a Video:
+   - The user is prompted to choose a video from the list by entering a number.
+   - The code ensures the selected number is valid and corresponds to an actual video file.
+
+3. Play the Video:
+   - Once a valid video file is selected, the code uses OpenCV (`cv2`) to read and display the video frames.
+   - It uses the `ffpyplayer` library to handle the audio part of the video.
+   - The video is displayed in a window, and the user can press the 'q' key to stop playback.
+
+4. Error Handling:
+   - The code checks if the provided directory exists and if it contains any video files.
+   - It also handles cases where the selected video file cannot be found or played.

@@ -1,0 +1,28 @@
+#### 1. Modules to Install
+
+To run this code, you need to install the Pillow library. Pillow is an image processing library in Python. You can install it using the following command: `pip install pillow`
+
+#### 2. What Does the Code Do?
+
+This code adds a watermark to an image. Here’s how it works:
+
+1. Open the Original Image:
+   - The code starts by opening an image file from the specified path. It uses the Pillow library to handle image operations. If the file does not exist, it prints an error message and stops.
+
+2. Prepare for Editing:
+   - It creates a new image of the same size as the original but with a transparent background. This transparent image will be used to draw the watermark text.
+
+3. Select a Font:
+   - The code tries to use a specific font file to style the watermark text. If it cannot find the font file, it prints an error message and stops.
+
+4. Determine Watermark Position:
+   - The code calculates where to place the watermark text based on the specified position (`bottom_right`, `bottom_left`, `top_right`, or `top_left`). It also adds an offset to adjust the text’s final location.
+
+5. Draw the Watermark:
+   - It draws the watermark text onto the transparent image. The text is styled with a specific color and is fully opaque.
+
+6. Combine Images:
+   - The code merges the original image with the watermark. This is done by layering the watermark image on top of the original image.
+
+7. Save the Watermarked Image:
+   - Finally, it saves the new image with the watermark applied. The image is converted to a standard format (JPEG) before saving to ensure compatibility.

@@ -1,0 +1,41 @@
+#### 1. Modules to Install
+
+To run this code, you'll need to have the `tkinter` module, which is included with standard Python installations. This code uses `tkinter` for creating the graphical user interface (GUI).
+
+#### 2. What Does the Code Do?
+
+This code creates a Tic-Tac-Toe game where you play against a computer. Here's how it works:
+
+1. Setup and GUI:
+   - A graphical window is created using `tkinter`, which displays a 3x3 grid of buttons representing the Tic-Tac-Toe board.
+   - Each button is clickable and represents a cell in the grid where the player can place their marker ("X").
+
+2. Game Logic:
+   - Checking for a Winner:
+     - The game checks if there’s a winner after each move by checking rows, columns, and diagonals to see if all cells contain the same marker ("X" or "O").
+   - Checking for a Draw:
+     - The game also checks if the board is full without any winners, which would result in a draw.
+
+3. Minimax Algorithm:
+   - The computer uses the Minimax algorithm to make decisions. This algorithm evaluates the possible moves and chooses the best one to maximize its chances of winning.
+   - It does this by recursively exploring all possible future moves, evaluating them, and choosing the move that offers the best outcome for the computer.
+
+4. Player Moves:
+   - When a player clicks on a cell, their move is processed. If the move is valid (the cell is empty), it updates the board and checks if the player has won or if the board is full.
+   - If the game isn't over, the computer then makes its move using the Minimax algorithm.
+
+5. Computer Moves:
+   - After the player’s move, the computer calculates the best move using the Minimax algorithm and updates the board.
+
+6. Game Conclusion:
+   - When the game ends (either a win or a draw), a message box displays the result.
+   - The player is asked if they want to play again. If yes, the game resets; otherwise, the application quits.
+
+7. Resetting the Game:
+   - When the game is reset, the board is cleared, and all cells are set back to empty.
+
+This code sets up a graphical Tic-Tac-Toe game where you play against an AI opponent. The game includes features to:
+- Display a board and handle player and computer moves.
+- Use the Minimax algorithm for the computer’s moves.
+- Check for game outcomes like wins and draws.
+- Allow restarting the game or quitting.
